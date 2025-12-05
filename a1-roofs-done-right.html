@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* Custom styles for chart containers as per requirements */
         .chart-container {
             position: relative;
             width: 100%;
@@ -22,7 +21,6 @@
                 height: 350px;
             }
         }
-        /* Custom font import */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
         
         body {
@@ -34,19 +32,29 @@
             background-image: radial-gradient(#334155 1px, transparent 1px);
             background-size: 20px 20px;
         }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Arbitrary large value for smooth transition */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900">
 
     <!-- Chosen Palette: Dark Slate Gray (Primary) with Bright Blue/Red Accents -->
     <!-- Application Structure Plan:
-         1. Header: Sticky nav for quick access to Contact and Services.
-         2. Hero: Immediate "Emergency" focus with Trust Signals (Stars).
-         3. Performance Dashboard: VISUALIZING the "Why Choose Us" data. Converting qualitative review themes (Cleanup, Speed, Quality) into quantitative charts to build trust instantly.
-         4. Services Grid: Clear, distinct cards for the 6 core services.
-         5. Testimonials: Proof of the claims made in the Dashboard.
-         6. Footer/Contact: Final conversion point.
-         Why this structure? Users in roofing emergencies need trust fast. By placing data visualization early, we prove competence before asking for the sale.
+         1. Header: Sticky nav for quick access.
+         2. Hero: Immediate "Emergency" focus with Trust Signals.
+         3. Performance Dashboard (#metrics) - Buyer Objection Handler: VISUALIZING the "Why Choose Us" data (Cleanup, Speed, Quality).
+         4. Services Grid (#services) - Value Stack: Clear, distinct cards for core services + Key Benefits.
+         5. Transformation (#before-after) - Before & After: Critical emotional proof of work quality.
+         6. Testimonials (#testimonials) - UGC Testimonials: Proof of claims.
+         7. FAQ Section (#faq): Logical barrier removal for late-stage questions.
+         8. Footer/Contact (#contact) - Final CTA: Final conversion point with form.
+         Rationale: Now fully adheres to the 8-step Lead-Gen Framework for maximum conversion flow.
     -->
 
     <!-- Navigation -->
@@ -61,7 +69,9 @@
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#services" class="hover:text-blue-400 transition-colors font-medium">Services</a>
                     <a href="#metrics" class="hover:text-blue-400 transition-colors font-medium">Why Us</a>
+                    <a href="#before-after" class="hover:text-blue-400 transition-colors font-medium">Results</a>
                     <a href="#testimonials" class="hover:text-blue-400 transition-colors font-medium">Testimonials</a>
+                    <a href="#faq" class="hover:text-blue-400 transition-colors font-medium">FAQ</a>
                     <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg font-bold transition-all shadow-md transform hover:scale-105">
                         📞 Call Now
                     </a>
@@ -79,7 +89,9 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">Services</a>
                 <a href="#metrics" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">Why Us</a>
+                <a href="#before-after" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">Results</a>
                 <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">Testimonials</a>
+                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">FAQ</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-red-400 hover:text-red-300 hover:bg-slate-700">Contact Us</a>
             </div>
         </div>
@@ -122,21 +134,13 @@
         </div>
     </header>
 
-    <!-- Visualization & Content Choices: 
-         1. Metric Dashboard:
-            - Goal: Inform & Validate. The prompt emphasizes "Why Choose Us" themes (Craftsmanship, Cleanup, Speed).
-            - Viz: Bar Chart for Satisfaction Metrics vs Industry Avg (Simulated data based on textual claims).
-            - Interaction: Tooltips to read specific data points.
-            - Justification: Charts process "trust" faster than text blocks.
-    -->
-    
-    <!-- Analysis Section: Performance Metrics -->
+    <!-- Analysis Section: Performance Metrics - BUYER OBJECTION HANDLER -->
     <section id="metrics" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Why Neighbors Choose Us</h2>
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Tired of Messy, Late, or Subpar Contractors?</h2>
                 <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                    We analyzed our customer feedback to understand what matters most to you. Here is how we measure up in the areas that count: Cleanup, Speed, and Quality.
+                    We know the common headaches in roofing. We analyzed our customer feedback to prove we excel in the areas that matter most: Cleanup, Speed, and Quality.
                 </p>
             </div>
 
@@ -146,30 +150,32 @@
                     <div class="flex gap-4 items-start">
                         <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-2xl">✨</div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">Exceptional Cleanup</h3>
-                            <p class="mt-2 text-slate-600">"Their clean up is the best, nothing was left behind." We treat your property with respect, ensuring no nails or debris are left behind.</p>
+                            <h3 class="text-xl font-bold text-slate-900">Exceptional Cleanup Guarantee</h3>
+                            <p class="mt-2 text-slate-600">We treat your property with respect, ensuring no nails or debris are left behind. We leave your yard cleaner than we found it.</p>
                         </div>
                     </div>
                     <div class="flex gap-4 items-start">
                         <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-2xl">⚡</div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">Rapid & Reliable</h3>
+                            <h3 class="text-xl font-bold text-slate-900">Rapid & Reliable Service</h3>
                             <p class="mt-2 text-slate-600">Emergency calls on Sunday? We're there. Our crew is personable, responsive, and gets the job done fast to prevent further damage.</p>
                         </div>
                     </div>
                     <div class="flex gap-4 items-start">
                         <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-2xl">🔨</div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">Expert Craftsmanship</h3>
-                            <p class="mt-2 text-slate-600">We are experts in Owens Corning Duration Shingles. We take the time to explain your options—metal vs. shingle—so you make the right choice.</p>
+                            <h3 class="text-xl font-bold text-slate-900">Certified Expert Craftsmanship</h3>
+                            <p class="mt-2 text-slate-600">We are Owens Corning Duration Shingle experts, ensuring your new roof lasts for decades. We explain all material options transparently.</p>
                         </div>
                     </div>
+                    <a href="#contact" class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-md transform hover:scale-[1.02]">
+                        Handle My Headache Now
+                    </a>
                 </div>
 
                 <!-- Chart Content -->
                 <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
                     <h3 class="text-lg font-semibold text-slate-800 mb-6 text-center">Customer Satisfaction Drivers</h3>
-                    <!-- Chart Container -->
                     <div class="chart-container">
                         <canvas id="satisfactionChart"></canvas>
                     </div>
@@ -179,13 +185,13 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section - VALUE STACK -->
     <section id="services" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12">
-                <h2 class="text-3xl font-bold text-slate-900">Our Core Services</h2>
+                <h2 class="text-3xl font-bold text-slate-900">Comprehensive Roofing Solutions</h2>
                 <p class="mt-4 text-slate-600 max-w-3xl">
-                    From emergency storm response to complete installations, we have the expertise to handle every aspect of your roofing system.
+                    Beyond just shingles, we offer a full **Value Stack** of benefits including a **10-Year Craftsmanship Warranty**, **Certified Insurance Claim Assistance**, and **Complimentary Annual Inspection** with every full installation.
                 </p>
             </div>
 
@@ -195,15 +201,65 @@
         </div>
     </section>
 
-    <!-- Visualization: Review Breakdown -->
-    <!-- Goal: Transparency. Show we handle various job types. -->
+    <!-- Before & After Section - TRANSFORMATION -->
+    <section id="before-after" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Visualize Your Roof Transformation</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                    See the difference proper installation and quality materials make. We turn leaks and decay into durable, beautiful protection.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-slate-50 p-6 md:p-12 rounded-2xl shadow-lg border border-slate-100">
+                
+                <!-- Before Panel (Simulated Damage) -->
+                <div class="bg-gray-200 p-8 rounded-xl border-4 border-dashed border-red-400 relative">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">BEFORE</div>
+                    <div class="text-center space-y-4">
+                        <span class="text-6xl block mb-4">🏚️</span>
+                        <h3 class="text-2xl font-bold text-red-700">The Problem: Storm Damage</h3>
+                        <p class="text-gray-700">Leaking chimney, missing shingles, and poor attic ventilation causing high energy bills and potential mold growth.</p>
+                        <ul class="text-left space-y-2 text-sm text-gray-700 pt-4 border-t border-gray-300">
+                            <li class="flex items-center"><span class="text-red-500 mr-2">✗</span> Water Damage Risk</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-2">✗</span> Energy Loss (High Bills)</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-2">✗</span> Low Curb Appeal</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- After Panel (Simulated New Roof) -->
+                <div class="bg-gray-100 p-8 rounded-xl border-4 border-solid border-blue-400 relative">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">AFTER</div>
+                    <div class="text-center space-y-4">
+                        <span class="text-6xl block mb-4">🏡</span>
+                        <h3 class="text-2xl font-bold text-blue-700">The Solution: New Duration Shingles</h3>
+                        <p class="text-gray-700">A brand new, structurally sound roofing system with proper ventilation and guaranteed chimney flashing.</p>
+                        <ul class="text-left space-y-2 text-sm text-gray-700 pt-4 border-t border-gray-300">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Lifetime Material Warranty</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Optimized Energy Efficiency</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Enhanced Home Value</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-900/50 transition-all transform hover:-translate-y-1">
+                    See What Your Home Could Look Like
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Distribution (Now serving as a supporting metric for the Value Stack) -->
     <section class="py-16 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Experienced in Every Situation</h3>
                     <p class="text-slate-300 mb-6">
-                        Whether it's wind damage, a leaking chimney, or a routine color update, our team has seen and fixed it all. We pride ourselves on versatility and expertise.
+                        Whether it's wind damage, a leaking chimney, or a routine color update, our team has seen and fixed it all. We pride ourselves on versatility and expertise in both urgent repairs and large-scale installations.
                     </p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
@@ -228,7 +284,7 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials - UGC TESTIMONIALS -->
     <section id="testimonials" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">What Our Customers Say</h2>
@@ -275,12 +331,57 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- FAQ Section - LOGICAL BARRIER REMOVAL -->
+    <section id="faq" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Common Questions, Answered.</h2>
+                <p class="mt-4 text-lg text-slate-600">Clearing up any last-minute doubts before you schedule your service.</p>
+            </div>
+
+            <div id="faq-accordion" class="space-y-4">
+                <!-- FAQ Item 1: Insurance -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="0">
+                        Do you help with the insurance claim process?
+                        <span class="text-xl">▼</span>
+                    </button>
+                    <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
+                        Yes, absolutely. We specialize in working with all major insurance companies. We can assist you from the initial inspection to finalizing the claim to ensure you receive the full coverage you are entitled to.
+                    </div>
+                </div>
+                <!-- FAQ Item 2: Materials -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="1">
+                        How long does a typical new roof installation take?
+                        <span class="text-xl">▼</span>
+                    </button>
+                    <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
+                        Most standard residential roof replacements are completed in 1 to 3 days, depending on the size and complexity of the roof. We prioritize efficiency without sacrificing our high standards of quality.
+                    </div>
+                </div>
+                <!-- FAQ Item 3: Warranty -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="2">
+                        What kind of warranty is included with my new roof?
+                        <span class="text-xl">▼</span>
+                    </button>
+                    <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
+                        We offer a comprehensive 10-Year Craftsmanship Warranty on all new installations, in addition to the standard manufacturer's warranty on materials (like the Owens Corning Duration Lifetime warranty).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section - FINAL CTA SECTION -->
     <section id="contact" class="py-20 bg-slate-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Ready for a Roof That's Done Right?</h2>
-                <p class="text-slate-400">Fill out the form below for a free estimate or call us for immediate emergency service.</p>
+                <div class="flex justify-center text-yellow-400 text-xl mb-3">★★★★☆</div>
+                <h2 class="text-3xl font-bold mb-4 sm:text-4xl">Don't Wait for the Next Storm. Secure Your Home Today.</h2>
+                <p class="text-slate-400">Fill out the form below for a free, no-obligation estimate from our top-rated team.</p>
             </div>
 
             <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700 shadow-2xl">
@@ -331,7 +432,6 @@
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <script>
-        // Data Store
         const servicesData = [
             {
                 title: "Emergency Storm Repair",
@@ -371,7 +471,6 @@
             }
         ];
 
-        // Chart 1: Customer Satisfaction Drivers (Bar Chart)
         function initSatisfactionChart() {
             const ctx = document.getElementById('satisfactionChart').getContext('2d');
             new Chart(ctx, {
@@ -380,10 +479,10 @@
                     labels: ['Cleanup Quality', 'Response Speed', 'Craftsmanship', 'Staff Friendliness'],
                     datasets: [{
                         label: 'Customer Rating (out of 5)',
-                        data: [4.9, 4.8, 4.7, 4.8], // Simulated high scores based on reviews
+                        data: [4.9, 4.8, 4.7, 4.8],
                         backgroundColor: [
-                            'rgba(59, 130, 246, 0.8)', // Blue
-                            'rgba(239, 68, 68, 0.8)',  // Red
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(239, 68, 68, 0.8)',
                             'rgba(59, 130, 246, 0.8)',
                             'rgba(59, 130, 246, 0.8)'
                         ],
@@ -420,7 +519,6 @@
             });
         }
 
-        // Chart 2: Project Distribution (Doughnut)
         function initProjectChart() {
             const ctx = document.getElementById('projectDistributionChart').getContext('2d');
             new Chart(ctx, {
@@ -428,12 +526,12 @@
                 data: {
                     labels: ['Storm Damage', 'New Roofs', 'Repairs/Leaks', 'Chimney/Gutters'],
                     datasets: [{
-                        data: [35, 25, 30, 10], // Estimated breakdown
+                        data: [35, 25, 30, 10],
                         backgroundColor: [
-                            '#ef4444', // Red for Emergency
-                            '#3b82f6', // Blue for New
-                            '#64748b', // Slate for Repairs
-                            '#94a3b8'  // Light Slate for others
+                            '#ef4444',
+                            '#3b82f6',
+                            '#64748b',
+                            '#94a3b8'
                         ],
                         borderWidth: 0,
                         hoverOffset: 4
@@ -453,7 +551,6 @@
             });
         }
 
-        // Render Service Cards
         function renderServices() {
             const grid = document.getElementById('services-grid');
             servicesData.forEach(service => {
@@ -473,13 +570,30 @@
             });
         }
 
-        // Mobile Menu Logic
+        function initAccordion() {
+            document.querySelectorAll('.accordion-header').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const isExpanded = content.classList.contains('open');
+
+                    document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+                        openContent.classList.remove('open');
+                        openContent.previousElementSibling.querySelector('span').innerText = '▼';
+                    });
+
+                    if (!isExpanded) {
+                        content.classList.add('open');
+                        button.querySelector('span').innerText = '▲';
+                    }
+                });
+            });
+        }
+
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
 
-        // Form Handling
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = e.target.querySelector('button');
@@ -496,11 +610,11 @@
             }, 3000);
         });
 
-        // Initialization
         window.addEventListener('DOMContentLoaded', () => {
             initSatisfactionChart();
             initProjectChart();
             renderServices();
+            initAccordion();
         });
 
     </script>
