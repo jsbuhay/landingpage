@@ -39,45 +39,24 @@
 </head>
 <body class="bg-gray-50 text-slate-800 antialiased selection:bg-yellow-200 selection:text-blue-900">
 
-    <!-- Navigation -->
-    <nav class="bg-blue-950 text-white sticky top-0 z-50 shadow-lg border-b border-blue-900">
+    <!-- Navigation (Now simplified to Logo + CTA only for maximum conversion focus) -->
+    <header class="bg-blue-950 text-white sticky top-0 z-50 shadow-lg border-b border-blue-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
+                <!-- Logo on Left -->
                 <div class="flex-shrink-0 flex items-center gap-2">
                     <span class="text-3xl">🌴</span>
                     <span class="font-bold text-xl tracking-tight">North Hollywood Roof Service</span>
                 </div>
-                <!-- Desktop Nav -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#services" class="hover:text-amber-400 transition-colors font-medium">Services</a>
-                    <a href="#objections" class="hover:text-amber-400 transition-colors font-medium">Guarantees</a>
-                    <a href="#before-after" class="hover:text-amber-400 transition-colors font-medium">Our Work</a>
-                    <a href="#testimonials" class="hover:text-amber-400 transition-colors font-medium">Reviews</a>
-                    <a href="#faq" class="hover:text-amber-400 transition-colors font-medium">FAQ</a>
-                    <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-blue-900 px-5 py-2.5 rounded-lg font-bold transition-all shadow-md transform hover:scale-105">
-                        Get Estimate
+                <!-- CTA Button on Right (Replaces all navigation links) -->
+                <div class="flex items-center">
+                    <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-blue-900 px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg font-bold transition-all shadow-md transform hover:scale-105 text-sm sm:text-base whitespace-nowrap">
+                        Free Estimate
                     </a>
                 </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
-                        <span class="text-2xl">☰</span>
-                    </button>
-                </div>
             </div>
         </div>
-        <!-- Mobile Nav Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-blue-900 border-t border-blue-800">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">Services</a>
-                <a href="#objections" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">Guarantees</a>
-                <a href="#before-after" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">Our Work</a>
-                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">Reviews</a>
-                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">FAQ</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-amber-400 hover:text-amber-300 hover:bg-blue-800">Contact Us</a>
-            </div>
-        </div>
-    </nav>
+    </header>
 
     <!-- 1. HERO SECTION (Immediate Value & Trust) -->
     <header class="hero-pattern text-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden relative">
@@ -88,14 +67,14 @@
                     <span class="text-sm uppercase tracking-wide">Serving North Hollywood & Los Angeles Since 2017</span>
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
-                    Professional, Guaranteed Roofing for <span class="text-amber-400">Your Hollywood Home</span>.
+                    North Hollywood Roofing Without the Drama: <span class="text-amber-400">Punctuality, Transparency, & Zero Surprise Costs.</span>
                 </h1>
                 <p class="mt-4 text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed">
-                    Roof repair and replacement that is "as great as new." We guarantee satisfaction and honor our warranties.
+                    We guarantee to show up on time, provide itemized, fixed pricing, and only declare the job complete after your final satisfaction sign-off. Experience truly professional, warrantied service.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                     <a href="#contact" class="w-full sm:w-auto text-center bg-amber-500 hover:bg-amber-400 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-amber-900/50 transition-all transform hover:-translate-y-1">
-                        Get Your FREE, Transparent Estimate
+                        Request Your Free, Guaranteed Quote
                     </a>
                 </div>
                 
@@ -454,10 +433,7 @@
             });
         }
 
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+        // Removed mobile menu functionality as requested.
 
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
