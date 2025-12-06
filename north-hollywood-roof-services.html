@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Hollywood Roof Service: Guaranteed Repairs & New Roofs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-pattern {
+            /* Localized color: Hollywood Blue/Gold */
+            background-color: #0c4a6e; /* Darker Blue */
+            background-image: radial-gradient(#1e40af 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Arbitrary large value for smooth transition */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased selection:bg-yellow-200 selection:text-blue-900">
+
+    <!-- Navigation -->
+    <nav class="bg-blue-950 text-white sticky top-0 z-50 shadow-lg border-b border-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span class="text-3xl">🌴</span>
+                    <span class="font-bold text-xl tracking-tight">North Hollywood Roof Service</span>
+                </div>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#services" class="hover:text-amber-400 transition-colors font-medium">Services</a>
+                    <a href="#objections" class="hover:text-amber-400 transition-colors font-medium">Guarantees</a>
+                    <a href="#before-after" class="hover:text-amber-400 transition-colors font-medium">Our Work</a>
+                    <a href="#testimonials" class="hover:text-amber-400 transition-colors font-medium">Reviews</a>
+                    <a href="#faq" class="hover:text-amber-400 transition-colors font-medium">FAQ</a>
+                    <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-blue-900 px-5 py-2.5 rounded-lg font-bold transition-all shadow-md transform hover:scale-105">
+                        Get Estimate
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <span class="text-2xl">☰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Nav Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-900 border-t border-blue-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">Services</a>
+                <a href="#objections" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">Guarantees</a>
+                <a href="#before-after" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">Our Work</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">Reviews</a>
+                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-800">FAQ</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-amber-400 hover:text-amber-300 hover:bg-blue-800">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION (Immediate Value & Trust) -->
+    <header class="hero-pattern text-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:w-2/3">
+                <div class="inline-flex items-center bg-amber-500/80 rounded-full px-4 py-1.5 mb-6 text-blue-900 font-bold border border-amber-300">
+                    <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse mr-2"></span>
+                    <span class="text-sm uppercase tracking-wide">Serving North Hollywood & Los Angeles Since 2017</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Professional, Guaranteed Roofing for <span class="text-amber-400">Your Hollywood Home</span>.
+                </h1>
+                <p class="mt-4 text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed">
+                    Roof repair and replacement that is "as great as new." We guarantee satisfaction and honor our warranties.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                    <a href="#contact" class="w-full sm:w-auto text-center bg-amber-500 hover:bg-amber-400 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-amber-900/50 transition-all transform hover:-translate-y-1">
+                        Get Your FREE, Transparent Estimate
+                    </a>
+                </div>
+                
+                <!-- Trust Signal -->
+                <div class="mt-10 flex items-center gap-4 bg-blue-900/50 p-4 rounded-lg backdrop-blur-sm w-fit border border-blue-800">
+                    <div class="flex text-amber-400 text-xl">
+                        ★★★★☆
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-white">4.1 Star Rating</span>
+                        <span class="text-sm text-slate-400">9 Local Reviews (Source: Provided Data)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. BUYER OBJECTION HANDLER (Address Core Hesitations) -->
+    <section id="objections" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Your 3 Biggest Roofing Worries, Solved.</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                    We know reliability, warranty honesty, and pricing transparency matter most. We guarantee our process to eliminate common contractor headaches.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Objection 1: Timeliness/Reliability (Addressing Brian Pierson's review) -->
+                <div class="bg-red-50 p-6 rounded-xl border-t-4 border-red-500 shadow-md">
+                    <div class="text-4xl mb-3">🕒</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Punctuality Guarantee</h3>
+                    <p class="text-slate-600">If we set an appointment for an estimate, **we call you 30 minutes before arrival.** No shows and missed windows are unacceptable. We value your time.</p>
+                </div>
+                <!-- Objection 2: Warranty Honored (Addressing Sally Garrison's positive review and Nia's negative point) -->
+                <div class="bg-blue-50 p-6 rounded-xl border-t-4 border-blue-500 shadow-md">
+                    <div class="text-4xl mb-3">📜</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Honored Warranty Commitment</h3>
+                    <p class="text-slate-600">We stand behind our work. If we install it, we warranty it—**full stop.** (We provide clear written documentation on all material warranties and labor guarantees).</p>
+                </div>
+                <!-- Objection 3: Transparency/Satisfaction (Addressing Nia and Rodrigo Livingston) -->
+                <div class="bg-amber-50 p-6 rounded-xl border-t-4 border-amber-500 shadow-md">
+                    <div class="text-4xl mb-3">🤝</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Final Satisfaction Sign-Off</h3>
+                    <p class="text-slate-600">We only declare the work complete after we've walked the property with you and heard your **full satisfaction.** No surprises, no hidden fees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. VALUE STACK SECTIONS (Detailed Information) -->
+    <section id="services" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold text-slate-900">Our Comprehensive North Hollywood Services</h2>
+                <p class="mt-4 text-slate-600 max-w-3xl mx-auto">
+                    From emergency storm repair to full-scale custom installations, our professional and well-trained workers deliver top-tier results.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-2xl mb-4">🚨</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Leak Detection & Emergency Repair</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Rapidly locate and seal holes, leaks, and damage. We specialize in making your roof "as great as new" after unexpected issues.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-2xl mb-4">🏠</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Full Roof Replacement & Installation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Complete residential and commercial roof system installation using high-quality materials and backed by our honest warranty commitment.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-2xl mb-4">📃</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Post-Installation Inspection & Punch-List</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">We provide a responsive, formal post-installation inspection and handle every item on the final punch-list to ensure your home is perfect (as noted by Parker Tanner).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BEFORE & AFTER SECTION (Visualize Transformation) -->
+    <section id="before-after" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">From Problem to Perfect: The NHRS Transformation</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                    See the difference when professional, well-trained workers handle your project. Result: "as great as new" (Harlan Molina, 8 years ago).
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-slate-50 p-6 md:p-12 rounded-2xl shadow-lg border border-slate-100">
+                
+                <!-- Before Panel (Simulated Damage) -->
+                <div class="bg-gray-200 p-8 rounded-xl border-4 border-dashed border-red-400 relative">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">BEFORE: Decay</div>
+                    <div class="text-center space-y-4">
+                        <span class="text-6xl block mb-4">🏚️</span>
+                        <h3 class="text-2xl font-bold text-red-700">Old, Leaking, and Unreliable</h3>
+                        <p class="text-gray-700">Tired shingles, poor flashing, and a hole on the roof leading to interior damage and stress.</p>
+                    </div>
+                </div>
+
+                <!-- After Panel (Simulated New Roof) -->
+                <div class="bg-gray-100 p-8 rounded-xl border-4 border-solid border-blue-400 relative">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">AFTER: Renewed</div>
+                    <div class="text-center space-y-4">
+                        <span class="text-6xl block mb-4">🏡</span>
+                        <h3 class="text-2xl font-bold text-blue-700">Sealed, Durable, and Guaranteed</h3>
+                        <p class="text-gray-700">A completely sealed, beautiful roof that delivers peace of mind and is backed by a professional warranty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 3. UGC TESTIMONIALS (Social Proof & Relatability) -->
+    <section id="testimonials" class="py-20 bg-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Hear from Your North Hollywood Neighbors</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1: Warranty Honored (Sally Garrison) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-blue-100">
+                    <div class="text-amber-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"We recently noticed a small leak and contacted them since it was still under warranty. **They were out that same day to repair it. Very good service!**"</p>
+                    <p class="font-bold text-blue-900">Sally Garrison</p>
+                </div>
+
+                <!-- Testimonial 2: Professionalism & Training (JOHNSON HOWARD) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-blue-100">
+                    <div class="text-amber-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"The workers from North Hollywood Roof Services were **very professional and well trained**. The hole on our roof was completely sealed away!"</p>
+                    <p class="font-bold text-blue-900">JOHNSON HOWARD</p>
+                </div>
+
+                <!-- Testimonial 3: Process & Satisfaction (Rodrigo Livingston) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-blue-100">
+                    <div class="text-amber-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"From the initial phone call to the end of works, they were professional, courteous and friendly. **They never declared end of work before they heard our full satisfaction.**"</p>
+                    <p class="font-bold text-blue-900">Rodrigo Livingston</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ SECTION (Clear Follow-Up Questions) -->
+    <section id="faq" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Common Questions & Warranty Clarity.</h2>
+                <p class="mt-4 text-lg text-slate-600">Addressing the important details on estimates, scheduling, and warranty policies.</p>
+            </div>
+
+            <div id="faq-accordion" class="space-y-4">
+                <!-- FAQ 1: Scheduling/No-Show (Directly addresses the Brian Pierson review) -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="0">
+                        What if you miss the scheduled estimate time?
+                        <span class="text-xl">▼</span>
+                    </button>
+                    <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
+                        We respect your time. We guarantee a call 30 minutes before our arrival within the scheduled window. If we are delayed due to an unavoidable emergency, we will call you immediately to reschedule and offer a complimentary roof inspection on your home when we arrive.
+                    </div>
+                </div>
+                <!-- FAQ 2: Warranty on Materials (Directly addresses the Nia review) -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="1">
+                        Do you provide a warranty on materials I supply (e.g., from Home Depot)?
+                        <span class="text-xl">▼</span>
+                    </button>
+                    <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
+                        **No.** We only provide a full, written warranty on all labor and materials that are **sourced, approved, and installed by North Hollywood Roof Services.** This ensures quality control and allows us to honor our long-term guarantees. We do not warranty client-provided materials.
+                    </div>
+                </div>
+                <!-- FAQ 3: Pricing Transparency (Addresses Nia's overcharge concern) -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="2">
+                        How can I be sure the labor and materials cost is fair?
+                        <span class="text-xl">▼</span>
+                    </button>
+                    <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
+                        We provide detailed, line-item estimates that clearly separate labor, materials, and disposal fees. We encourage you to get multiple proposals—our commitment to transparency means you will understand exactly what you are paying for and why.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CTA SECTION (Conversion & Urgency) -->
+    <section id="contact" class="py-20 bg-blue-950 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="flex justify-center text-amber-400 text-xl mb-3">★★★★☆</div>
+                <h2 class="text-3xl font-bold mb-4 sm:text-4xl">Ready to Hire Professional, Warrantied Service?</h2>
+                <p class="text-slate-400">Schedule your free, zero-obligation estimate today. We guarantee punctuality and professional service.</p>
+            </div>
+
+            <div class="bg-blue-900 rounded-2xl p-8 border border-blue-800 shadow-2xl">
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full bg-blue-950 border border-blue-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors" placeholder="First Last Name" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full bg-blue-950 border border-blue-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors" placeholder="(555) 123-4567" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full bg-blue-950 border border-blue-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors" placeholder="example@email.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Property Address & Service Needed</label>
+                        <textarea id="message" rows="4" class="w-full bg-blue-950 border border-blue-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors" placeholder="123 Main St, North Hollywood, CA..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-blue-950 font-bold py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg">
+                        Request Estimate & Warranty Details
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-slate-400 py-12 border-t border-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h3 class="text-white font-bold text-lg mb-2">North Hollywood Roof Service</h3>
+                <p>Licensed & Insured Local Professionals</p>
+                <p class="mt-2 text-sm">© 2024 All Rights Reserved.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+                <a href="tel:+15550000000" class="text-xl font-bold text-white hover:text-amber-400 transition-colors">
+                    (555) 555-5555
+                </a>
+                <p class="text-sm mt-1">Available for Scheduling & Quotes</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function initAccordion() {
+            document.querySelectorAll('.accordion-header').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const isExpanded = content.classList.contains('open');
+
+                    document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+                        openContent.classList.remove('open');
+                        openContent.previousElementSibling.querySelector('span').innerText = '▼';
+                    });
+
+                    if (!isExpanded) {
+                        content.classList.add('open');
+                        button.querySelector('span').innerText = '▲';
+                    }
+                });
+            });
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Request Sent! We'll Call You Shortly 📞";
+            btn.classList.add('bg-green-500');
+            btn.classList.remove('bg-amber-500');
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.add('bg-amber-500');
+                btn.classList.remove('bg-green-500');
+                e.target.reset();
+            }, 4000);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initAccordion();
+        });
+
+    </script>
+</body>
+</html>
