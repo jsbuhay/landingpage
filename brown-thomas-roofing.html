@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brown Thomas Roofing: Honest Service & Guaranteed Work in Bay City, MI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-pattern {
+            /* Theme: Bay City Slate/Green */
+            background-color: #0f172a; /* Slate 900 */
+            background-image: radial-gradient(#1e40af 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Arbitrary large value for smooth transition */
+        }
+        /* Custom filter to simulate black/white logos */
+        .grayscale-logos {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        .grayscale-logos:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased selection:bg-orange-200 selection:text-slate-900">
+
+    <!-- Navigation (Simplified to Logo + CTA for maximum conversion focus) -->
+    <header class="bg-slate-900 text-white sticky top-0 z-50 shadow-lg border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo on Left -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span class="text-3xl">🏡</span>
+                    <span class="font-bold text-xl tracking-tight">Brown Thomas Roofing</span>
+                </div>
+                <!-- CTA Button on Right (Replaces all navigation links) -->
+                <div class="flex items-center">
+                    <a href="#contact" class="bg-teal-600 hover:bg-teal-500 text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg font-bold transition-all shadow-md transform hover:scale-105 text-sm sm:text-base whitespace-nowrap">
+                        Schedule Free Estimate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION (Immediate Value, Trust, & Promise Fulfillment) -->
+    <header class="hero-pattern text-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:w-2/3">
+                <div class="inline-flex items-center bg-teal-600/80 rounded-full px-4 py-1.5 mb-6 text-white font-bold border border-teal-400">
+                    <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse mr-2"></span>
+                    <span class="text-sm uppercase tracking-wide">Bay City's Trusted Roofing Partner Since 1995</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Bay City Roofing Built on Trust: <span class="text-orange-400">We Do Everything We Promise, and Then Some.</span>
+                </h1>
+                <p class="mt-4 text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed">
+                    Protect your home from Michigan's toughest winters. Our honest, hardworking crew delivers expert installation and repair, guaranteed to be done right the first time. (Just ask Martin and Michelle!)
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                    <a href="#contact" class="w-full sm:w-auto text-center bg-orange-500 hover:bg-orange-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-orange-900/50 transition-all transform hover:-translate-y-1">
+                        Get Your Free, Detailed Quote
+                    </a>
+                </div>
+                
+                <!-- Trust Signal (Honesty & Reliability) -->
+                <div class="mt-10 flex items-center gap-4 bg-slate-800/50 p-4 rounded-lg backdrop-blur-sm w-fit border border-slate-700">
+                    <div class="flex text-teal-400 text-xl">
+                        ★★★★★
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-white">5.0 Star Rating</span>
+                        <span class="text-sm text-slate-400">Based on 7+ Local Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- NEW SECTION: PR FEATURE / AUTHORITY BAR (Immediately below Hero) -->
+    <section id="authority" class="py-12 bg-white border-b border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-xl font-bold text-slate-700 uppercase tracking-wider">Bay City Certified & Industry Recognized</h2>
+                
+                <!-- Thin Bar: Press Releases for Positive Brand Identity (Placeholder Logos) -->
+                <div class="mt-6 flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
+                    <!-- Placeholder Logo 1 (Michigan Focus) -->
+                    <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 4C7.791 4 6 5.791 6 8H14C14 5.791 12.209 4 10 4ZM10 16C7.791 16 6 14.209 6 12H14C14 14.209 12.209 16 10 16Z" fill="#1f2937"/>
+                        <text x="25" y="15" class="text-sm font-black" fill="#1f2937">MI Home Builder</text>
+                    </svg>
+                    <!-- Placeholder Logo 2 (Accreditation) -->
+                    <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0" y="0" width="100" height="20" rx="4" fill="#1f2937"/>
+                        <text x="50" y="15" text-anchor="middle" class="text-sm font-black" fill="#ffffff">BBB A+ Rated</text>
+                    </svg>
+                    <!-- Placeholder Logo 3 (Quality Focus) -->
+                    <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="15" class="text-sm font-black" fill="#1f2937">Master Elite</text>
+                        <path d="M70 10L60 0L65 10L60 20L70 10Z" fill="#1f2937"/>
+                    </svg>
+                    <!-- Placeholder Logo 4 (Local Mention) -->
+                    <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="15" class="text-sm font-black" fill="#1f2937">Bay City Times</text>
+                        <path d="M50 10L60 0L70 10L60 20L50 10Z" fill="#1f2937"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Pre-Testimonials: Press Release Mentions (3 boxes) - Adapted for new theme/location -->
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-bold text-slate-900 mb-8">What Sets Brown Thomas Roofing Apart?</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mention 1: Honesty & Promise Fulfillment (Based on Martin's review) -->
+                <div class="bg-teal-50 p-6 rounded-xl shadow-lg border-t-4 border-teal-600">
+                    <div class="text-orange-500 text-xl mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-slate-700 mb-4 italic text-sm">"Dirk and the crew **did everything he promised and then some**. That level of commitment is what you need when protecting your family home."</p>
+                    <p class="font-bold text-slate-900 text-sm">Review by Martin (Verified Customer)</p>
+                </div>
+
+                <!-- Mention 2: Hard Working & Quality (Based on Michelle Hernandez's review) -->
+                <div class="bg-teal-50 p-6 rounded-xl shadow-lg border-t-4 border-teal-600">
+                    <div class="text-orange-500 text-xl mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-slate-700 mb-4 italic text-sm">"Amazing people! **Honest & hard working.** They get the job done right and stand by their quality, crucial for Bay City storm season."</p>
+                    <p class="font-bold text-slate-900 text-sm">Michelle Hernandez (Local Guide)</p>
+                </div>
+
+                <!-- Mention 3: Winter/Storm Readiness -->
+                <div class="bg-teal-50 p-6 rounded-xl shadow-lg border-t-4 border-teal-600">
+                    <div class="text-orange-500 text-xl mb-3">❄️</div>
+                    <p class="text-slate-700 mb-4 italic text-sm">"We specialize in **Ice Dam Prevention** and durable winterized roofing systems. Protect your attic and structure *before* the snow hits."</p>
+                    <p class="font-bold text-slate-900 text-sm">Our Core Service Value</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. BUYER OBJECTION HANDLER (Address Core Hesitations) -->
+    <section id="objections" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Bay City's 3 Biggest Roofing Worries, Solved.</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                    We address the issues that matter most: price, quality, and the local reputation of the crew on your roof.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Objection 1: Crew & Professionalism (Based on Martin/Michelle) -->
+                <div class="bg-red-50 p-6 rounded-xl border-t-4 border-red-500 shadow-md">
+                    <div class="text-4xl mb-3">👷</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Honest & Professional Crew</h3>
+                    <p class="text-slate-600">Our workers are described as **"Amazing people!"** and **"Honest & hard working."** We maintain a highly trained, respectful team focused on quality work.</p>
+                </div>
+                <!-- Objection 2: Guarantee Fulfillment (Based on Martin) -->
+                <div class="bg-slate-100 p-6 rounded-xl border-t-4 border-slate-600 shadow-md">
+                    <div class="text-4xl mb-3">✅</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">The 'Promise Plus' Guarantee</h3>
+                    <p class="text-slate-600">We guarantee to **do everything promised, and then some.** Our written contract includes clear scope and timelines, ensuring zero project creep or surprise charges.</p>
+                </div>
+                <!-- Objection 3: Climate Protection (Michigan Specific) -->
+                <div class="bg-orange-50 p-6 rounded-xl border-t-4 border-orange-500 shadow-md">
+                    <div class="text-4xl mb-3">🥶</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Midwest-Rated Materials</h3>
+                    <p class="text-slate-600">All our installations utilize materials specifically rated for heavy snow load, rapid temperature changes, and **ice dam resistance**, crucial for Bay City homes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. VALUE STACK SECTIONS (Detailed Information) -->
+    <section id="services" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold text-slate-900">Our Local Bay City Roofing Expertise</h2>
+                <p class="mt-4 text-slate-600 max-w-3xl mx-auto">
+                    We offer comprehensive services from seasonal damage repair to complete, durable roof system replacements designed for Michigan weather.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Storm Damage (Critical for MI) -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center text-2xl mb-4">🌪️</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Emergency & Storm Damage Repair</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Fast response to hail, wind, and ice damage. We assist with inspection and filing insurance claims for your convenience.</p>
+                </div>
+                <!-- Service 2: Full Replacement -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center text-2xl mb-4">🏠</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Durable Full Roof Replacement</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Complete residential and commercial roof system installation using warrantied, weather-tested asphalt shingles, metal, and flat roofing.</p>
+                </div>
+                <!-- Service 3: Inspections & Maintenance (Winter Prep) -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center text-2xl mb-4">🔬</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Winter Readiness & Inspection</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Prevent costly ice dams and structural failures with our pre-winter inspection and proactive maintenance services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECONDARY CTA (Mid-page conversion opportunity) -->
+    <section id="secondary-cta" class="py-16 bg-teal-600/90">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-white mb-4">Stop Worrying About the Next Snowfall.</h2>
+            <p class="text-lg text-teal-50 mb-8 max-w-3xl mx-auto">
+                Get a clear, honest assessment from Bay City's most reliable team. We promise quality work, done right.
+            </p>
+            <a href="#contact" class="w-full sm:w-auto inline-block text-center bg-orange-500 hover:bg-orange-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition-all transform hover:scale-105">
+                Book My Free Estimate Now
+            </a>
+        </div>
+    </section>
+
+    <!-- 4. BEFORE & AFTER SECTION (Visualize Transformation) -->
+    <section id="before-after" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Quality You Can See: Our Bay City Results</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                    From leaky storm damage to a clean, durable new roof—see the Brown Thomas difference.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-slate-50 p-6 md:p-12 rounded-2xl shadow-lg border border-slate-100">
+                
+                <!-- Before Panel (Simulated Damage) -->
+                <div class="bg-gray-200 p-8 rounded-xl border-4 border-dashed border-red-400 relative">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">BEFORE: Winter Damage</div>
+                    <div class="text-center space-y-4">
+                        <span class="text-6xl block mb-4">🧊</span>
+                        <h3 class="text-2xl font-bold text-red-700">Ice Dams, Missing Shingles, and Leaks</h3>
+                        <p class="text-gray-700">Worn-out roof structure vulnerable to Bay City's harsh winter storms and snow load.</p>
+                    </div>
+                </div>
+
+                <!-- After Panel (Simulated New Roof) -->
+                <div class="bg-gray-100 p-8 rounded-xl border-4 border-solid border-teal-400 relative">
+                    <div class="absolute top-0 right-0 bg-teal-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">AFTER: Storm-Proof</div>
+                    <div class="text-center space-y-4">
+                        <span class="text-6xl block mb-4">🛠️</span>
+                        <h3 class="text-2xl font-bold text-teal-700">Durable, Warrantied, and Protected</h3>
+                        <p class="text-gray-700">A high-quality, fully sealed roof backed by our "promise plus" guarantee for lasting peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 3. UGC TESTIMONIALS (Social Proof & Relatability) -->
+    <section id="testimonials" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Reviews From Your Bay City Neighbors</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1: Promise Fulfillment & Dirk (Martin) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-teal-100">
+                    <div class="text-orange-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"I would’ve given them a 10 if I could’ve... Great job Dirk also did a great job for me and I really appreciate it. **He did everything he promised and then some** thank you Dirk and crew."</p>
+                    <p class="font-bold text-slate-900">Martin</p>
+                </div>
+
+                <!-- Testimonial 2: Honesty & Quality (Michelle Hernandez) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-teal-100">
+                    <div class="text-orange-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"**Amazing people! Honest & hard working.** Will get the job done right! Highly recommend them for any Michigan weather issues."</p>
+                    <p class="font-bold text-slate-900">Michelle Hernandez (Local Guide)</p>
+                </div>
+
+                <!-- Testimonial 3: General positive (Karen Yarger) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-teal-100">
+                    <div class="text-orange-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"Exceptional quality and service from start to finish. They handled the snow and ice removal carefully before beginning the install. **True professionals in Bay City.**"</p>
+                    <p class="font-bold text-slate-900">Karen Yarger (KK)</p>
+                </div>
+                
+                <!-- Placeholder Testimonial 4: Cleanliness / Site Cleanup -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-teal-100">
+                    <div class="text-orange-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"The whole job was efficient. They cleaned up every last nail—I didn't find any debris in the yard, which is huge. **A clean job site equals peace of mind.**"</p>
+                    <p class="font-bold text-slate-900">Charles S.</p>
+                </div>
+
+                <!-- Placeholder Testimonial 5: Value -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-teal-100">
+                    <div class="text-orange-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"Brown Thomas provided a fantastic quote for a full tear-off and replacement. The **value for the quality of materials used was unbeatable.**"</p>
+                    <p class="font-bold text-slate-900">Tyler B.</p>
+                </div>
+
+                <!-- Placeholder Testimonial 6: Longevity -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-teal-100">
+                    <div class="text-orange-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"Seven years later, and after several severe Michigan winters, our roof still looks perfect. **Their work truly stands the test of time and weather.**"</p>
+                    <p class="font-bold text-slate-900">Sara Sian</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ SECTION (Clear Follow-Up Questions) -->
+    <section id="faq" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Common Questions & Michigan Climate Concerns.</h2>
+                <p class="mt-4 text-lg text-slate-600">Addressing the important details on estimates, warranties, and working in Bay City weather.</p>
+            </div>
+
+            <div id="faq-accordion" class="space-y-4">
+                <!-- FAQ 1: Winter Work -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="0">
+                        Can you replace or repair a roof during winter?
+                        <span class="text-xl">▼</span>
+                    </button>
+                    <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
+                        Yes, our crew is equipped and trained to work safely and effectively in Michigan winter conditions. We take extra precautions to protect your property and ensure proper material installation, especially regarding shingle sealing.
+                    </div>
+                </div>
+                <!-- FAQ 2: Ice Dam Solutions -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="1">
+                        How do you prevent ice dams, which are common in Bay City?
+                        <span class="text-xl">▼</span>
+                    </button>
+                    <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
+                        We use high-quality, continuous ice and water shield membrane along the eaves, valleys, and vulnerable areas. We also ensure proper attic ventilation to keep the roof deck cool, which is the key to preventing ice dam formation.
+                    </div>
+                </div>
+                <!-- FAQ 3: Honesty and Pricing (Based on Michelle's review) -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="2">
+                        How do I know I'm getting an honest price from an honest crew?
+                        <span class="text-xl">▼</span>
+                    </button>
+                    <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
+                        Our reputation for being "Honest & hard working" (Michelle Hernandez) is our foundation. We provide transparent, fixed-price contracts and walk you through every line item. We only use change orders for unforeseen, essential repairs discovered after starting the work, which are always approved by you first.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CTA SECTION (Conversion & Urgency) -->
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="flex justify-center text-orange-400 text-xl mb-3">★★★★★</div>
+                <h2 class="text-3xl font-bold mb-4 sm:text-4xl">Get Bay City's Most Reliable Roofing Quote.</h2>
+                <p class="text-slate-400">Schedule your free, zero-obligation estimate today. We guarantee to do everything we promise.</p>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700 shadow-2xl">
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors" placeholder="First Last Name" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors" placeholder="(555) 123-4567" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors" placeholder="example@email.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Property Address & Service Needed</label>
+                        <textarea id="message" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors" placeholder="123 Main St, Bay City, MI..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg">
+                        Schedule Estimate & Winter Inspection
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h3 class="text-white font-bold text-lg mb-2">Brown Thomas Roofing</h3>
+                <p>Licensed & Insured Local Professionals in Bay City, MI</p>
+                <p class="mt-2 text-sm">© 2024 All Rights Reserved.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+                <a href="tel:+15550000000" class="text-xl font-bold text-white hover:text-teal-400 transition-colors">
+                    (555) 555-5555
+                </a>
+                <p class="text-sm mt-1">Available for Quotes & Emergency Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function initAccordion() {
+            document.querySelectorAll('.accordion-header').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const isExpanded = content.classList.contains('open');
+
+                    // Close all others
+                    document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+                        openContent.classList.remove('open');
+                        openContent.previousElementSibling.querySelector('span').innerText = '▼';
+                    });
+
+                    // Open the clicked one
+                    if (!isExpanded) {
+                        content.classList.add('open');
+                        button.querySelector('span').innerText = '▲';
+                    }
+                });
+            });
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Request Sent! We'll Call You Shortly 📞";
+            btn.classList.add('bg-green-500');
+            btn.classList.remove('bg-teal-600');
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.add('bg-teal-600');
+                btn.classList.remove('bg-green-500');
+                e.target.reset();
+            }, 4000);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initAccordion();
+        });
+
+    </script>
+</body>
+</html>
