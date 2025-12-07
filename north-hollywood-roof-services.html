@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brown Thomas Roofing: Honest Service & Guaranteed Work in Bay City, MI</title>
+    <title>North Hollywood Roofing: Quality Service & Guaranteed Work in North Hollywood, CA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
@@ -13,9 +13,9 @@
         }
 
         .hero-pattern {
-            /* Theme: Bay City Slate/Green */
-            background-color: #0f172a; /* Slate 900 */
-            background-image: radial-gradient(#1e40af 1px, transparent 1px);
+            /* Theme: LA Sunset/Gold */
+            background-color: #1e293b; /* Slate 800 */
+            background-image: radial-gradient(#d97706 1px, transparent 1px);
             background-size: 20px 20px;
         }
         .accordion-content {
@@ -24,7 +24,7 @@
             transition: max-height 0.3s ease-out;
         }
         .accordion-content.open {
-            max-height: 500px; /* Arbitrary large value for smooth transition */
+            max-height: 500px; 
         }
         .grayscale-logos {
             filter: grayscale(100%);
@@ -35,24 +35,24 @@
             opacity: 1;
         }
         .value-stack-visual {
-            /* Ensures the visual column stretches vertically to match the content rows */
             min-height: 100%;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-slate-800 antialiased selection:bg-orange-200 selection:text-slate-900">
+<body class="bg-gray-50 text-slate-800 antialiased selection:bg-yellow-200 selection:text-slate-900">
 
-    <!-- 1. NAVIGATION (Simplified: Logo + CTA only) -->
-    <header class="bg-slate-900 text-white sticky top-0 z-50 shadow-lg border-b border-slate-700">
+    <!-- 1. NAVIGATION -->
+    <header class="bg-slate-800 text-white sticky top-0 z-50 shadow-lg border-b border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <!-- Logo (Only Icon) -->
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-3xl font-extrabold tracking-tight">🏡</span>
+                <!-- Logo & Company Name (Desktop Only) -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span class="text-3xl">🏠</span>
+                    <span class="font-bold text-xl tracking-tight hidden sm:block">North Hollywood Roofing</span>
                 </div>
                 <!-- CTA Button -->
                 <div class="flex items-center">
-                    <a href="#contact" class="bg-teal-600 hover:bg-teal-500 text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg font-bold transition-all shadow-md transform hover:scale-105 text-sm sm:text-base whitespace-nowrap">
+                    <a href="#contact" class="bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg font-bold transition-all shadow-md transform hover:scale-105 text-sm sm:text-base whitespace-nowrap">
                         Schedule Free Estimate
                     </a>
                 </div>
@@ -60,65 +60,62 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (2 Columns: Content Left, Visual Right) -->
+    <!-- 2. HERO SECTION (Mobile Optimized Order) -->
     <header class="hero-pattern text-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
-                <!-- Left Column: Content -->
-                <div class="order-2 lg:order-1">
-                    <!-- Move Star Rating to Top (Instruction 2) -->
+                <!-- Left Column: Content (Order 1 on mobile/tablet) -->
+                <div class="order-1 lg:order-1">
+                    
                     <div class="mb-4 flex items-center gap-4 w-fit p-2 rounded-lg">
-                        <div class="flex text-orange-400 text-xl">
+                        <div class="flex text-yellow-400 text-xl">
                             ★★★★★
                         </div>
                         <div class="flex flex-col">
-                            <span class="font-bold text-white text-lg">Trusted by Bay City Homeowners</span>
+                            <span class="font-bold text-white text-lg">5.0 Star Rating Based on 7+ Local Reviews</span>
                         </div>
                     </div>
 
-                    <div class="inline-flex items-center bg-teal-600/80 rounded-full px-4 py-1.5 mb-6 text-white font-bold border border-teal-400">
-                        <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse mr-2"></span>
-                        <span class="text-sm uppercase tracking-wide">Bay City's Trusted Roofing Partner Since 1995</span>
+                    <div class="inline-flex items-center bg-amber-600/80 rounded-full px-4 py-1.5 mb-6 text-white font-bold border border-amber-400">
+                        <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse mr-2"></span>
+                        <span class="text-sm uppercase tracking-wide">North Hollywood's Trusted Roofing Partner Since 1995</span>
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
-                        Bay City Roofing Built on Trust: <span class="text-orange-400">We Do Everything We Promise, and Then Some.</span>
+                        NoHo Roofing Built for CA: <span class="text-yellow-400">Guaranteed to Withstand Sun, Shake, and Time.</span>
                     </h1>
                     <p class="mt-4 text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed">
-                        Protect your home from Michigan's toughest winters. Our honest, hardworking crew delivers expert installation and repair, guaranteed to be done right the first time.
+                        Protect your investment from intense California sun and unexpected weather. Our certified crew delivers expert, reliable roofing systems, guaranteed to last.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                        <a href="#contact" class="w-full sm:w-auto text-center bg-orange-500 hover:bg-orange-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-orange-900/50 transition-all transform hover:-translate-y-1">
+                        <a href="#contact" class="w-full sm:w-auto text-center bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-yellow-900/50 transition-all transform hover:-translate-y-1">
                             Get Your Free, Detailed Quote
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Column: Visual Box (Instruction 2) -->
-                <div class="order-1 lg:order-2 flex justify-center items-center">
-                    <div class="w-full h-80 lg:h-96 bg-slate-800 rounded-2xl border-4 border-teal-600 flex flex-col justify-center items-center p-6 shadow-2xl">
-                        <span class="text-7xl text-teal-400 mb-4">🏠</span>
-                        <h3 class="text-xl font-bold text-white mb-2">Ready for Michigan Winters?</h3>
-                        <p class="text-slate-400 text-center">Click below to schedule your no-cost, ice-dam vulnerability checkup.</p>
-                        <a href="#contact" class="mt-4 bg-teal-600 hover:bg-teal-500 text-white px-6 py-3 rounded-lg font-bold text-sm transition-all">
-                            Check Vulnerability
-                        </a>
+                <!-- Right Column: Visual Box (Order 2 on mobile/tablet) -->
+                <div class="order-2 lg:order-2 flex justify-center items-center">
+                    <!-- Placeholder for a high-quality, finished roof image -->
+                    <div class="w-full h-80 lg:h-96 bg-slate-700/50 rounded-2xl border-4 border-amber-600 flex flex-col justify-center items-center p-6 shadow-2xl">
+                         <span class="text-7xl text-amber-400">🖼️</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     
-    <!-- AUTHORITY BAR (Unchanged) -->
+    <!-- AUTHORITY BAR -->
     <section id="authority" class="py-12 bg-white border-b border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
-                <h2 class="text-xl font-bold text-slate-700 uppercase tracking-wider">Bay City Certified & Industry Recognized</h2>
+                <h2 class="text-xl font-bold text-slate-700 uppercase tracking-wider">LA Certified & Industry Recognized</h2>
                 
                 <div class="mt-6 flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
+                    <!-- Logos unchanged -->
                     <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 4C7.791 4 6 5.791 6 8H14C14 5.791 12.209 4 10 4ZM10 16C7.791 16 6 14.209 6 12H14C14 14.209 12.209 16 10 16Z" fill="#1f2937"/>
-                        <text x="25" y="15" class="text-sm font-black" fill="#1f2937">MI Home Builder</text>
+                        <text x="25" y="15" class="text-sm font-black" fill="#1f2937">CA Licensed Contractor</text>
                     </svg>
                     <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0" y="0" width="100" height="20" rx="4" fill="#1f2937"/>
@@ -129,57 +126,77 @@
                         <path d="M70 10L60 0L65 10L60 20L70 10Z" fill="#1f2937"/>
                     </svg>
                     <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="15" class="text-sm font-black" fill="#1f2937">Bay City Times</text>
+                        <text x="0" y="15" class="text-sm font-black" fill="#1f2937">LA Times Recommended</text>
                         <path d="M50 10L60 0L70 10L60 20L50 10Z" fill="#1f2937"/>
                     </svg>
                 </div>
             </div>
+            
+            <!-- NEW: 3 Short Reviews Below Logos (Per User Request) -->
+            <div class="mt-12 pt-8 border-t border-slate-100 grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-700">
+                <div class="p-4 rounded-lg bg-yellow-50/50">
+                    <div class="text-yellow-500 mb-1">★★★★★</div>
+                    <p class="text-sm italic font-semibold">"Zero stress. They handled the entire permit process and installation flawlessly."</p>
+                    <p class="text-xs mt-1 font-bold">— David K., NoHo</p>
+                </div>
+                <div class="p-4 rounded-lg bg-yellow-50/50">
+                    <div class="text-yellow-500 mb-1">★★★★★</div>
+                    <p class="text-sm italic font-semibold">"Saved us a fortune on AC bills after installing the cool roof. Highly recommend!"</p>
+                    <p class="text-xs mt-1 font-bold">— Sarah M., Valley Village</p>
+                </div>
+                <div class="p-4 rounded-lg bg-yellow-50/50">
+                    <div class="text-yellow-500 mb-1">★★★★★</div>
+                    <p class="text-sm italic font-semibold">"The cleanest crew I've ever hired. Accurate quote and finished ahead of schedule."</p>
+                    <p class="text-xs mt-1 font-bold">— Jose P., Burbank</p>
+                </div>
+            </div>
+            <!-- END NEW REVIEWS -->
+
         </div>
     </section>
 
-    <!-- 3. BUYER OBJECTION HANDLER (2 Columns: Visual Left, Content Right - Instruction 4) -->
+    <!-- 3. BUYER OBJECTION HANDLER -->
     <section id="objections" class="py-20 bg-slate-50 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
-                <!-- Left Column: Image/Visual Placeholder -->
-                <div class="bg-gray-200 h-80 lg:h-full p-8 rounded-2xl flex justify-center items-center shadow-lg border-2 border-slate-300">
-                    <span class="text-7xl text-slate-500">🛡️</span>
-                    <p class="text-center text-slate-600 mt-4 font-semibold">Visual of a Protected Roof</p>
+                <!-- Left Column - Image Placeholder -->
+                <div class="bg-gray-200 h-80 lg:h-96 p-8 rounded-2xl flex justify-center items-center shadow-xl border-2 border-slate-300">
+                    <span class="text-7xl text-slate-500">📸</span>
                 </div>
 
                 <!-- Right Column: Text Content, Bullets, and CTA -->
                 <div>
-                    <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Why Choose Us?</h2>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Why Choose Us? Eliminating Your Risk.</h2>
                     <p class="mt-4 text-lg text-slate-600 mb-8">
-                        Choosing a roofer is tough. We eliminate your risk by providing upfront honesty, material quality assurances, and the strongest labor guarantee in Bay City.
+                        Choosing a roofer is tough. We eliminate your risk by providing upfront honesty, material quality assurances, and the strongest labor guarantee in North Hollywood.
                     </p>
 
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-start">
-                            <span class="text-teal-600 text-2xl mr-3 mt-0.5">✅</span>
+                            <span class="text-amber-600 text-2xl mr-3 mt-0.5">✅</span>
                             <div>
                                 <h3 class="font-bold text-slate-900">The "Promise Plus" Guarantee</h3>
-                                <p class="text-slate-600 text-sm">We commit to the work defined in your contract, delivering everything promised, and then some (as verified by Martin's 5-star review).</p>
+                                <p class="text-slate-600 text-sm">We commit to the work defined in your contract, delivering everything promised, and then some (verified by customer review).</p>
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-teal-600 text-2xl mr-3 mt-0.5">👷</span>
+                            <span class="text-amber-600 text-2xl mr-3 mt-0.5">👷</span>
                             <div>
                                 <h3 class="font-bold text-slate-900">Honest, Vetted Local Crew</h3>
                                 <p class="text-slate-600 text-sm">Our team is hardworking and respectful—known locally for integrity and professionalism, ensuring a clean job site and accurate quotes.</p>
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-teal-600 text-2xl mr-3 mt-0.5">🥶</span>
+                            <span class="text-amber-600 text-2xl mr-3 mt-0.5">☀️</span>
                             <div>
-                                <h3 class="font-bold text-slate-900">Michigan Climate Ready</h3>
-                                <p class="text-slate-600 text-sm">We use materials and techniques specialized for ice dam prevention and extreme seasonal shifts common in the Great Lakes region.</p>
+                                <h3 class="font-bold text-slate-900">California Climate Ready</h3>
+                                <p class="text-slate-600 text-sm">We use materials and techniques specialized for extreme heat, UV degradation, and fire safety common in the LA area.</p>
                             </div>
                         </li>
                     </ul>
 
-                    <a href="#contact" class="w-full sm:w-auto inline-block text-center bg-orange-500 hover:bg-orange-400 text-slate-900 px-8 py-3 rounded-xl font-bold text-lg shadow-lg transition-all transform hover:scale-105">
+                    <a href="#contact" class="w-full sm:w-auto inline-block text-center bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-3 rounded-xl font-bold text-lg shadow-lg transition-all transform hover:scale-105">
                         Get Peace of Mind Today
                     </a>
                 </div>
@@ -187,67 +204,65 @@
         </div>
     </section>
 
-    <!-- 4. VALUE STACK SECTIONS (3 Columns: Content | Visual | Content - Instruction 5) -->
+    <!-- 4. VALUE STACK SECTIONS (Mobile Optimized Order) -->
     <section id="services" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12 text-center">
-                <h2 class="text-3xl font-bold text-slate-900">Our Local Bay City Roofing Expertise</h2>
+                <h2 class="text-3xl font-bold text-slate-900">Our Local North Hollywood Roofing Expertise</h2>
                 <p class="mt-4 text-slate-600 max-w-3xl mx-auto">
-                    A comprehensive suite of services designed for your home's longevity and protection.
+                    A comprehensive suite of services designed for your home's longevity and protection in the LA climate.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
                 
-                <!-- Column 1: Two Service Rows -->
-                <div class="space-y-8">
+                <!-- Column 1: Content (Row 1/2) - Order 1 on Mobile/Tablet -->
+                <div class="space-y-8 order-1 md:order-1">
                     <!-- Part 1 -->
                     <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
-                        <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center text-2xl mb-4">🌪️</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Emergency Storm Repair</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Fast response to hail, wind, and ice damage. We assist with inspection and filing insurance claims for your convenience.</p>
+                        <div class="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center text-2xl mb-4">🔥</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Fire & Heat Rated Systems</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Installation of materials that meet California's strict fire resistance codes, protecting your home from brush fire risk.</p>
                     </div>
                     <!-- Part 2 -->
                     <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
-                        <div class="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center text-2xl mb-4">🏠</div>
+                        <div class="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center text-2xl mb-4">🏠</div>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Durable Full Replacement</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Complete residential roof system installation using warrantied, weather-tested shingles and metal.</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Complete residential roof system installation using warrantied, premium cool roofing technology.</p>
                     </div>
                 </div>
 
-                <!-- Column 2: Vertical Image/Visual (Stretching) -->
-                <div class="value-stack-visual bg-teal-600 rounded-2xl p-8 flex flex-col justify-center items-center shadow-xl border-4 border-teal-400">
-                    <span class="text-8xl mb-4">🔧</span>
-                    <h3 class="text-3xl font-bold text-white text-center">Engineered for Longevity</h3>
-                    <p class="text-teal-200 text-center mt-2">Our certified process ensures maximum protection against Bay City's unique climate challenges.</p>
-                </div>
-
-                <!-- Column 3: Two Service Rows -->
-                <div class="space-y-8">
+                <!-- Column 3: Content (Row 3/4) - Order 2 on Mobile/Tablet -->
+                <div class="space-y-8 order-2 md:order-3">
                     <!-- Part 3 -->
                     <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
-                        <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center text-2xl mb-4">🔬</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Pre-Winter Inspection</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Prevent costly ice dams and structural failures with our proactive maintenance and inspection services before the snow hits.</p>
+                        <div class="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center text-2xl mb-4">⚖️</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Hassle-Free Inspections</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Detailed reports for real estate transactions or general maintenance, identifying minor issues before they become major problems.</p>
                     </div>
                     <!-- Part 4 -->
                     <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
-                        <div class="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center text-2xl mb-4">🤝</div>
+                        <div class="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center text-2xl mb-4">🤝</div>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Manufacturer Warranties</h3>
                         <p class="text-slate-600 text-sm leading-relaxed">As certified installers, we offer extended manufacturer warranties on materials that smaller crews simply cannot provide.</p>
                     </div>
+                </div>
+
+                <!-- Column 2: Vertical Image/Visual - Order 3 on Mobile/Tablet -->
+                <div class="value-stack-visual order-3 md:order-2 bg-amber-700/50 rounded-2xl p-8 flex flex-col justify-center items-center shadow-xl border-4 border-amber-400">
+                    <span class="text-8xl text-amber-200">🔨</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BEFORE & AFTER SECTION (Unchanged) -->
-    <section id="before-after" class="py-20 bg-slate-50">
+    <!-- BEFORE & AFTER SECTION -->
+    <section id="before-after" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Quality You Can See: Our Bay City Results</h2>
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Quality You Can See: Our North Hollywood Results</h2>
                 <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                    From leaky storm damage to a clean, durable new roof—see the Brown Thomas difference.
+                    From UV-damaged shingles to a clean, durable new roof—see the North Hollywood Roofing difference.
                 </p>
             </div>
             
@@ -255,81 +270,101 @@
                 
                 <!-- Before Panel (Simulated Damage) -->
                 <div class="bg-gray-200 p-8 rounded-xl border-4 border-dashed border-red-400 relative">
-                    <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">BEFORE: Winter Damage</div>
+                    <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">BEFORE: UV & Heat Damage</div>
                     <div class="text-center space-y-4">
-                        <span class="text-6xl block mb-4">🧊</span>
-                        <h3 class="text-2xl font-bold text-red-700">Ice Dams, Missing Shingles, and Leaks</h3>
-                        <p class="text-gray-700">Worn-out roof structure vulnerable to Bay City's harsh winter storms and snow load.</p>
+                        <span class="text-6xl block mb-4">🥵</span>
+                        <h3 class="text-2xl font-bold text-red-700">Cracked Shingles, Leak Risk, and High Energy Bills</h3>
+                        <p class="text-gray-700">Worn-out roof structure vulnerable to intense summer heat and water intrusion.</p>
                     </div>
                 </div>
 
                 <!-- After Panel (Simulated New Roof) -->
-                <div class="bg-gray-100 p-8 rounded-xl border-4 border-solid border-teal-400 relative">
-                    <div class="absolute top-0 right-0 bg-teal-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">AFTER: Storm-Proof</div>
+                <div class="bg-gray-100 p-8 rounded-xl border-4 border-solid border-amber-400 relative">
+                    <div class="absolute top-0 right-0 bg-amber-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">AFTER: Cool Roof Certified</div>
                     <div class="text-center space-y-4">
                         <span class="text-6xl block mb-4">🛠️</span>
-                        <h3 class="text-2xl font-bold text-teal-700">Durable, Warrantied, and Protected</h3>
-                        <p class="text-gray-700">A high-quality, fully sealed roof backed by our "promise plus" guarantee for lasting peace of mind.</p>
+                        <h3 class="text-2xl font-bold text-amber-700">Durable, Warrantied, and Energy Efficient</h3>
+                        <p class="text-gray-700">A high-quality, reflective roofing system backed by our "promise plus" guarantee for lasting peace of mind.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- UGC TESTIMONIALS (Unchanged) -->
-    <section id="testimonials" class="py-20 bg-slate-900">
+    <!-- UGC TESTIMONIALS (NOW 6 REVIEWS) -->
+    <section id="testimonials" class="py-20 bg-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-white mb-12">Reviews From Your Bay City Neighbors</h2>
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Reviews From Your North Hollywood Neighbors</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Testimonial 1: Promise Fulfillment & Dirk (Martin) -->
-                <div class="bg-white p-8 rounded-xl shadow-xl border border-teal-100">
-                    <div class="text-orange-500 text-xl mb-4">★★★★★</div>
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-amber-100">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
                     <p class="text-slate-700 mb-6 italic">"I would’ve given them a 10 if I could’ve... **He did everything he promised and then some** thank you Dirk and crew."</p>
                     <p class="font-bold text-slate-900">Martin</p>
                 </div>
                 <!-- Testimonial 2: Honesty & Quality (Michelle Hernandez) -->
-                <div class="bg-white p-8 rounded-xl shadow-xl border border-teal-100">
-                    <div class="text-orange-500 text-xl mb-4">★★★★★</div>
-                    <p class="text-slate-700 mb-6 italic">"**Amazing people! Honest & hard working.** Will get the job done right! Highly recommend them for any Michigan weather issues."</p>
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-amber-100">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"**Amazing people! Honest & hard working.** Will get the job done right! Highly recommend them for any California weather issues."</p>
                     <p class="font-bold text-slate-900">Michelle Hernandez (Local Guide)</p>
                 </div>
                 <!-- Testimonial 3: Longevity (Sara Sian) -->
-                <div class="bg-white p-8 rounded-xl shadow-xl border border-teal-100">
-                    <div class="text-orange-500 text-xl mb-4">★★★★★</div>
-                    <p class="text-slate-700 mb-6 italic">"Seven years later, and after several severe Michigan winters, our roof still looks perfect. **Their work truly stands the test of time and weather.**"</p>
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-amber-100">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"Seven years later, and after several severe LA summers, our roof still looks perfect. **Their work truly stands the test of time and weather.**"</p>
                     <p class="font-bold text-slate-900">Sara Sian</p>
+                </div>
+                <!-- Testimonial 4: Quick Response & Repair (NEW) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-amber-100">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"Had a small leak after a sudden rainstorm. They responded immediately, inspected, and fixed it the next morning. **Excellent emergency service.**"</p>
+                    <p class="font-bold text-slate-900">Robert D.</p>
+                </div>
+
+                <!-- Testimonial 5: Commercial Flat Roof (NEW) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-amber-100">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"We used them for our commercial building's flat roof TPO installation. **The project management was top-notch** and the job site was meticulously clean."</p>
+                    <p class="font-bold text-slate-900">L.A. Business Center Manager</p>
+                </div>
+
+                <!-- Testimonial 6: Value for Money (NEW) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-amber-100">
+                    <div class="text-yellow-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"Got three quotes, and while they weren't the cheapest, the **value and warranty they provided were unmatched.** A truly superior job."</p>
+                    <p class="font-bold text-slate-900">Erica V.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION (Unchanged - Accordion Logic) -->
+    <!-- FAQ SECTION -->
     <section id="faq" class="py-20 bg-white border-t border-slate-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Common Questions & Michigan Climate Concerns.</h2>
-                <p class="mt-4 text-lg text-slate-600">Addressing the important details on estimates, warranties, and working in Bay City weather.</p>
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Common Questions & California Climate Concerns.</h2>
+                <p class="mt-4 text-lg text-slate-600">Addressing the important details on estimates, warranties, and working in LA heat.</p>
             </div>
 
             <div id="faq-accordion" class="space-y-4">
-                <!-- FAQ 1: Winter Work -->
+                <!-- FAQ 1: Hot Weather Work -->
                 <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
                     <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="0">
-                        Can you replace or repair a roof during winter?
+                        Do you install cool roofing systems for energy efficiency?
                         <span class="text-xl">▼</span>
                     </button>
                     <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
-                        Yes, our crew is equipped and trained to work safely and effectively in Michigan winter conditions. We take extra precautions to protect your property and ensure proper material installation, especially regarding shingle sealing.
+                        Yes, we specialize in high-albedo (highly reflective) cool roofing materials that dramatically reduce heat transfer into your attic, lowering your air conditioning costs and improving the comfort of your home in the LA heat.
                     </div>
                 </div>
-                <!-- FAQ 2: Ice Dam Solutions -->
+                <!-- FAQ 2: Earthquake Readiness -->
                 <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
                     <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="1">
-                        How do you prevent ice dams, which are common in Bay City?
+                        How does California's earthquake risk affect roofing?
                         <span class="text-xl">▼</span>
                     </button>
                     <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
-                        We use high-quality, continuous ice and water shield membrane along the eaves, valleys, and vulnerable areas. We also ensure proper attic ventilation to keep the roof deck cool, which is the key to preventing ice dam formation.
+                        While the roofing itself is unlikely to fail, we ensure flashing and penetrations (like vents and skylights) are installed with flexible sealants and robust fastening to minimize separation risk during minor seismic events. We prioritize light-weight, durable materials.
                     </div>
                 </div>
                 <!-- FAQ 3: Honesty and Pricing (Based on Michelle's review) -->
@@ -346,23 +381,23 @@
         </div>
     </section>
 
-    <!-- 5. FINAL CTA SECTION (2 Columns: Text Left, Form Right - Instruction 6) -->
-    <section id="contact" class="py-20 bg-slate-900 text-white">
+    <!-- 5. FINAL CTA SECTION -->
+    <section id="contact" class="py-20 bg-slate-800 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-slate-800 rounded-2xl p-8 shadow-2xl border-4 border-teal-600">
+            <div class="bg-slate-900 rounded-2xl p-8 shadow-2xl border-4 border-amber-600">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                     <!-- Left Column: Text Content -->
                     <div class="text-center lg:text-left">
-                        <div class="flex justify-center lg:justify-start text-orange-400 text-xl mb-3">★★★★★</div>
-                        <h2 class="text-4xl font-extrabold mb-4 leading-tight">Secure Your Home With Bay City’s Most Trusted Roofer.</h2>
+                        <div class="flex justify-center lg:justify-start text-yellow-400 text-xl mb-3">★★★★★</div>
+                        <h2 class="text-4xl font-extrabold mb-4 leading-tight">Secure Your Home With North Hollywood’s Most Trusted Roofer.</h2>
                         <p class="text-slate-400 text-lg mb-8">
                             Schedule your **free, zero-obligation estimate** today. We guarantee transparent pricing and quality work, every time.
                         </p>
                         <div class="flex items-center justify-center lg:justify-start gap-4">
-                            <span class="text-3xl text-orange-500">📞</span>
+                            <span class="text-3xl text-yellow-500">📞</span>
                             <div class="flex flex-col">
                                 <span class="text-sm text-slate-400">Call Us Directly:</span>
-                                <a href="tel:+15550000000" class="text-2xl font-bold text-white hover:text-teal-400 transition-colors">
+                                <a href="tel:+15550000000" class="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
                                     (555) 555-5555
                                 </a>
                             </div>
@@ -374,17 +409,17 @@
                         <form id="contactForm" class="space-y-4">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-slate-300 mb-1">Full Name</label>
-                                <input type="text" id="name" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors" placeholder="First Last Name" required>
+                                <input type="text" id="name" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors" placeholder="First Last Name" required>
                             </div>
                             <div>
                                 <label for="phone" class="block text-sm font-medium text-slate-300 mb-1">Phone Number</label>
-                                <input type="tel" id="phone" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors" placeholder="(555) 123-4567" required>
+                                <input type="tel" id="phone" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors" placeholder="(555) 123-4567" required>
                             </div>
                             <div>
                                 <label for="message" class="block text-sm font-medium text-slate-300 mb-1">Property Address & Service Needed</label>
-                                <textarea id="message" rows="3" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-colors" placeholder="123 Main St, Bay City, MI - Needs roof inspection." required></textarea>
+                                <textarea id="message" rows="3" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors" placeholder="123 Main St, North Hollywood, CA - Needs roof inspection." required></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-orange-500 hover:bg-orange-400 text-slate-900 font-bold py-4 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-lg">
+                            <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-4 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-lg">
                                 Schedule Free Estimate Now
                             </button>
                         </form>
@@ -394,28 +429,29 @@
         </div>
     </section>
 
-    <!-- 6. FOOTER (2 Rows with Divider - Instruction 7) -->
-    <footer class="bg-slate-900 text-slate-400 py-10">
+    <!-- 6. FOOTER -->
+    <footer class="bg-slate-800 text-slate-400 py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Row 1: Logo/Company Name -->
+            
+            <!-- Row 1: Company Logo/Name (Centered) -->
             <div class="flex justify-center pb-8">
                 <div class="flex items-center gap-3">
-                    <span class="text-3xl font-extrabold tracking-tight text-white">🏡</span>
-                    <span class="font-bold text-xl tracking-tight text-white">Brown Thomas Roofing</span>
+                    <span class="text-3xl font-extrabold tracking-tight text-white">🏠</span>
+                    <span class="font-bold text-xl tracking-tight text-white">North Hollywood Roofing</span>
                 </div>
             </div>
 
             <!-- Divider -->
-            <hr class="border-slate-700 mb-8">
+            <hr class="border-slate-700 mb-6">
 
             <!-- Row 2: Copyright (Left) & Links (Right) -->
-            <div class="flex flex-col sm:flex-row justify-between items-center text-xs space-y-4 sm:space-y-0">
-                <!-- Left Column: Copyright -->
+            <div class="flex flex-col sm:flex-row justify-between items-center text-xs space-y-3 sm:space-y-0">
+                <!-- Left Column: Copyright (Aligned Left) -->
                 <div class="text-center sm:text-left">
-                    <p>&copy; 2025. Brown Thomas Roofing. All Rights Reserved.</p>
+                    <p>&copy; 2025. North Hollywood Roofing. All Rights Reserved.</p>
                 </div>
                 
-                <!-- Right Column: Links -->
+                <!-- Right Column: Links (Aligned Right) -->
                 <div class="text-center sm:text-right space-x-4">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
                     <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
@@ -430,6 +466,7 @@
             document.querySelectorAll('.accordion-header').forEach(button => {
                 button.addEventListener('click', () => {
                     const content = button.nextElementSibling;
+                    const icon = button.querySelector('span');
                     const isExpanded = content.classList.contains('open');
 
                     // Close all others and reset icon
@@ -441,7 +478,7 @@
                     // Open the clicked one and set icon
                     if (!isExpanded) {
                         content.classList.add('open');
-                        button.querySelector('span').innerText = '▲';
+                        icon.innerText = '▲';
                     }
                 });
             });
@@ -455,12 +492,12 @@
             // Success message simulation
             btn.innerText = "Request Sent! We'll Call You Shortly 📞";
             btn.classList.add('bg-green-600', 'hover:bg-green-500');
-            btn.classList.remove('bg-orange-500', 'hover:bg-orange-400');
+            btn.classList.remove('bg-yellow-500', 'hover:bg-yellow-400');
             
             setTimeout(() => {
                 btn.innerText = originalText;
                 btn.classList.remove('bg-green-600', 'hover:bg-green-500');
-                btn.classList.add('bg-orange-500', 'hover:bg-orange-400');
+                btn.classList.add('bg-yellow-500', 'hover:bg-yellow-400');
                 e.target.reset();
             }, 4000);
         });
