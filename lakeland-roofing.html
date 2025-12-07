@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakeland Roofing Inc. | Trusted Roofing Since 1975</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ====== GLOBAL STYLES ====== */
+        :root {
+            --primary: #dc2626; /* Red for roofing industry */
+            --primary-dark: #b91c1c;
+            --dark: #1f2937;
+            --darker: #111827;
+            --gray: #6b7280;
+            --light-gray: #9ca3af;
+            --lighter-gray: #f9fafb;
+            --border: #e5e7eb;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--darker);
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--darker);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--darker);
+        }
+        
+        p {
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 18px 36px;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-large {
+            padding: 22px 42px;
+            font-size: 20px;
+        }
+        
+        .star-rating {
+            color: #f59e0b;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            h1 {
+                font-size: 42px;
+            }
+            
+            h2 {
+                font-size: 32px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+        
+        /* ====== SECTION 1: TOP BAR ====== */
+        .top-bar {
+            background-color: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--darker);
+            text-decoration: none;
+        }
+        
+        .logo i {
+            color: var(--primary);
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        .top-cta {
+            padding: 15px 30px;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .top-cta {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+            
+            .logo {
+                font-size: 20px;
+            }
+        }
+        
+        /* ====== SECTION 2: HERO SECTION ====== */
+        .hero {
+            padding: 80px 0;
+            background-color: var(--lighter-gray);
+        }
+        
+        .hero .container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .hero-content {
+            flex: 0 0 60%;
+        }
+        
+        .hero-image {
+            flex: 0 0 40%;
+        }
+        
+        .hero-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .hero-rating .stars {
+            margin-right: 10px;
+        }
+        
+        .hero-rating-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero .container {
+                flex-direction: column;
+            }
+            
+            .hero-content, .hero-image {
+                flex: 0 0 100%;
+            }
+            
+            .hero-image {
+                order: 2;
+                margin-top: 40px;
+            }
+        }
+        
+        /* ====== SECTION 3: CREDIBILITY BAR ====== */
+        .credibility-bar {
+            background-color: var(--white);
+            padding: 40px 0;
+        }
+        
+        .credibility-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .credibility-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .credibility-logo {
+            height: 40px;
+            opacity: 0.7;
+            filter: grayscale(100%);
+            transition: opacity 0.3s ease;
+        }
+        
+        .credibility-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+        
+        @media (max-width: 768px) {
+            .credibility-logos {
+                gap: 30px;
+            }
+            
+            .credibility-logo {
+                height: 30px;
+            }
+        }
+        
+        /* ====== SECTION 4: PRE-TESTIMONIALS ====== */
+        .pre-testimonials {
+            background-color: var(--lighter-gray);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-card .stars {
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--darker);
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* ====== SECTION 5: OBJECTION HANDLER ====== */
+        .objection-handler .container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .objection-image {
+            flex: 0 0 40%;
+        }
+        
+        .objection-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .objection-content {
+            flex: 0 0 60%;
+        }
+        
+        .objection-bullets {
+            margin: 30px 0;
+        }
+        
+        .bullet-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+        
+        .bullet-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .bullet-text h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .bullet-text p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .objection-handler .container {
+                flex-direction: column;
+            }
+            
+            .objection-image, .objection-content {
+                flex: 0 0 100%;
+            }
+            
+            .objection-image {
+                order: 1;
+            }
+            
+            .objection-content {
+                order: 2;
+            }
+        }
+        
+        /* ====== SECTION 6: MORE TESTIMONIALS ====== */
+        .more-testimonials {
+            background-color: var(--lighter-gray);
+        }
+        
+        .testimonial-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card-large {
+            background-color: var(--white);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-card-large .stars {
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-card-large p {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-highlight {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* ====== SECTION 7: VALUE STACK ====== */
+        .value-stack {
+            background-color: var(--white);
+        }
+        
+        .value-container {
+            display: grid;
+            grid-template-columns: 30% 40% 30%;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .value-column {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .value-item {
+            text-align: center;
+        }
+        
+        .value-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .value-item h3 {
+            margin-bottom: 15px;
+        }
+        
+        .value-center img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .value-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .value-center {
+                order: 3;
+            }
+            
+            .value-column:first-child {
+                order: 1;
+            }
+            
+            .value-column:last-child {
+                order: 5;
+            }
+            
+            .value-cta {
+                order: 6;
+            }
+        }
+        
+        /* ====== SECTION 8: BEFORE/AFTER ====== */
+        .before-after {
+            background-color: var(--lighter-gray);
+        }
+        
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .comparison-box {
+            padding: 40px;
+            border-radius: 12px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .comparison-label {
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .comparison-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .comparison-box h3 {
+            margin-bottom: 20px;
+        }
+        
+        .before-box {
+            background-color: #fee2e2;
+            border-left: 5px solid #ef4444;
+        }
+        
+        .after-box {
+            background-color: #dcfce7;
+            border-left: 5px solid #22c55e;
+        }
+        
+        .before-label {
+            color: #991b1b;
+        }
+        
+        .after-label {
+            color: #166534;
+        }
+        
+        .before-after-cta {
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* ====== SECTION 9: VIDEO TESTIMONIAL ====== */
+        .video-testimonial {
+            background-color: var(--white);
+        }
+        
+        .video-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .video-player {
+            flex: 0 0 40%;
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-thumbnail img {
+            width: 100%;
+            display: block;
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--primary);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .play-button:hover {
+            background-color: var(--primary-dark);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .video-info {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+            color: var(--gray);
+        }
+        
+        .video-content {
+            flex: 0 0 60%;
+        }
+        
+        .video-content .stars {
+            margin-bottom: 20px;
+        }
+        
+        .video-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .video-author {
+            font-weight: 700;
+            color: var(--darker);
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        
+        .video-label {
+            display: inline-block;
+            background-color: var(--lighter-gray);
+            color: var(--gray);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column;
+            }
+            
+            .video-player, .video-content {
+                flex: 0 0 100%;
+            }
+        }
+        
+        /* ====== SECTION 10: FAQ ====== */
+        .faq-section {
+            background-color: var(--lighter-gray);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: var(--white);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            padding: 25px;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question i {
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 25px 25px;
+            font-size: 16px;
+            color: var(--gray);
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* ====== SECTION 11: FINAL CTA ====== */
+        .final-cta {
+            background-color: var(--white);
+        }
+        
+        .cta-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .cta-content {
+            flex: 0 0 50%;
+        }
+        
+        .cta-content .stars {
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .phone-cta {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 30px 0;
+            text-decoration: none;
+        }
+        
+        .phone-cta i {
+            margin-right: 15px;
+            font-size: 28px;
+        }
+        
+        .cta-form {
+            flex: 0 0 50%;
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--darker);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            .cta-container {
+                flex-direction: column;
+            }
+            
+            .cta-content, .cta-form {
+                flex: 0 0 100%;
+            }
+        }
+        
+        /* ====== SECTION 12: FOOTER ====== */
+        footer {
+            background-color: var(--lighter-gray);
+            padding-top: 50px;
+        }
+        
+        .footer-logo {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+        
+        .footer-logo .logo {
+            justify-content: center;
+            font-size: 28px;
+        }
+        
+        .footer-divider {
+            height: 1px;
+            background-color: var(--border);
+            width: 100%;
+        }
+        
+        .footer-bottom {
+            padding: 30px 0;
+        }
+        
+        .footer-bottom .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .separator {
+            color: var(--light-gray);
+        }
+        
+        @media (max-width: 768px) {
+            .footer-bottom .container {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SECTION 1: TOP BAR -->
+    <header class="top-bar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-home"></i> Lakeland Roofing Inc.
+            </a>
+            <a href="#final-cta" class="btn top-cta">Schedule Free Estimate</a>
+        </div>
+    </header>
+
+    <!-- SECTION 2: HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-rating">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="hero-rating-text">4.9 Star Rating Based on 200+ Verified Reviews</div>
+                </div>
+                <h1>Expert Roofing Solutions for Your Home Since 1975</h1>
+                <p class="hero-subtitle">Family-owned roofing company serving Minocqua, WI with precision installation, storm damage repair, and comprehensive roof inspections—backed by decades of craftsmanship.</p>
+                <a href="#final-cta" class="btn btn-large">Get Your Free Quote</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1566489564591-bf3c8c56e7b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lakeland Roofing professional team installing a new roof">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: CREDIBILITY BAR -->
+    <section class="credibility-bar">
+        <div class="container">
+            <div class="credibility-title">Trusted by Industry Leaders</div>
+            <div class="credibility-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Angi_Logo.svg/320px-Angi_Logo.svg.png" alt="Angi's List" class="credibility-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Google_logo.svg/320px-Google_logo.svg.png" alt="Google" class="credibility-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Better_Business_Bureau_logo.svg/320px-Better_Business_Bureau_logo.svg.png" alt="Better Business Bureau" class="credibility-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/NRCA_logo.svg/320px-NRCA_logo.svg.png" alt="National Roofing Contractors Association" class="credibility-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Forbes_logo.svg/320px-Forbes_logo.svg.png" alt="Forbes" class="credibility-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PRE-TESTIMONIALS -->
+    <section class="pre-testimonials">
+        <div class="container">
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Zero surprises. The final bill was exactly the same as the initial quote."</p>
+                    <div class="testimonial-author">— Jonathan</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Everything was picked up and clean. Not one plant was damaged."</p>
+                    <div class="testimonial-author">— Rich and Bonnie Hill</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Reshingled our roof in one day and it looks great. Very professional."</p>
+                    <div class="testimonial-author">— Peter Thompson</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: OBJECTION HANDLER -->
+    <section class="objection-handler">
+        <div class="container">
+            <div class="objection-image">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lakeland Roofing professional inspecting a roof">
+            </div>
+            <div class="objection-content">
+                <h2>Why Choose Us? Eliminating Your Risk.</h2>
+                <p>With over 8,000 homes and businesses served since 1975, we've perfected a roofing process that prioritizes your peace of mind. Our family-owned approach means we treat every roof as if it were our own home.</p>
+                
+                <div class="objection-bullets">
+                    <div class="bullet-item">
+                        <div class="bullet-icon">⏰</div>
+                        <div class="bullet-text">
+                            <h4>Why Now? Protect Before Damage Escalates</h4>
+                            <p>Small leaks become major structural issues. Wisconsin's harsh winters and storms can quickly worsen existing damage. Our free inspections identify problems early, saving you thousands in potential repairs.</p>
+                        </div>
+                    </div>
+                    <div class="bullet-item">
+                        <div class="bullet-icon">🏆</div>
+                        <div class="bullet-text">
+                            <h4>Why This? Decades of Family Craftsmanship</h4>
+                            <p>Unlike corporate chains, we're a family-run business with 50 years of local expertise. Brad and his team personally oversee every project, ensuring the quality that has earned us 200+ 5-star reviews.</p>
+                        </div>
+                    </div>
+                    <div class="bullet-item">
+                        <div class="bullet-icon">✅</div>
+                        <div class="bullet-text">
+                            <h4>Is This For Me? Transparent, No-Surprise Process</h4>
+                            <p>From same-day quotes to on-time completion, we've streamlined everything for homeowners. Whether you need storm damage repair, a full replacement, or just an inspection, we communicate clearly at every step.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#final-cta" class="btn">Get Peace of Mind Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: MORE TESTIMONIALS -->
+    <section class="more-testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Don't Just Take Our Word For It: Verified Reviews</h2>
+                <p class="section-subtitle">Hear from Minocqua homeowners who trusted Lakeland Roofing with their most important investment.</p>
+            </div>
+            
+            <div class="testimonial-grid-2">
+                <div class="testimonial-card-large">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Outstanding service from a truly reliable family-owned company! From the very beginning, their team was incredibly responsive. <span class="testimonial-highlight">The quality workmanship was impeccable—every detail handled with care and precision.</span>"</p>
+                    <div class="testimonial-author">Jonathan (Verified Customer)</div>
+                </div>
+                
+                <div class="testimonial-card-large">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Brad and his team did an amazing job. They did work on our boathouse and based on how clean the job site was, <span class="testimonial-highlight">it took me a while to realize they had been there.</span> Excellent work and went the extra mile with a special request."</p>
+                    <div class="testimonial-author">Tim Olip (Homeowner)</div>
+                </div>
+                
+                <div class="testimonial-card-large">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"I recommend Lakeland Roofing for your roofing needs! Within less than 2 hours of my inquiry, Brad scheduled an appointment. <span class="testimonial-highlight">They completed my entire roof replacement in just 5 hours with perfect cleanup.</span>"</p>
+                    <div class="testimonial-author">Mark Ross (Verified Customer)</div>
+                </div>
+                
+                <div class="testimonial-card-large">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Brad and Todd were quick to respond to make temporary repairs after trees fell on our property during a windstorm. <span class="testimonial-highlight">They followed up with permanent repairs and did a great job.</span> Highly responsive team."</p>
+                    <div class="testimonial-author">Bill Hucker (Property Owner)</div>
+                </div>
+                
+                <div class="testimonial-card-large">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Lakeland did a great job with our new roof. <span class="testimonial-highlight">Brad and his team were great at communicating</span> and did a nice job. We love the new roof and the professional service from start to finish."</p>
+                    <div class="testimonial-author">Dan Macleod (Homeowner)</div>
+                </div>
+                
+                <div class="testimonial-card-large">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Brad and crew were amazing! They arrived when scheduled and <span class="testimonial-highlight">completed our roof project ahead of schedule.</span> Competitive pricing and excellent communication throughout. Can't thank you enough!"</p>
+                    <div class="testimonial-author">Michelle & Kurt Veldhuizen (Homeowners)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: VALUE STACK -->
+    <section class="value-stack">
+        <div class="container">
+            <div class="section-title">
+                <h2>The 4 Pillars of a Roof Done Right</h2>
+                <p class="section-subtitle">Our proven process ensures your roofing project is completed with precision, transparency, and lasting quality.</p>
+            </div>
+            
+            <div class="value-container">
+                <div class="value-column">
+                    <div class="value-item">
+                        <div class="value-icon">📋</div>
+                        <h3>Comprehensive Assessment</h3>
+                        <p>We begin with a thorough roof inspection, identifying both visible issues and potential hidden problems. Our detailed assessment ensures we provide accurate quotes with no surprise costs later.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🤝</div>
+                        <h3>Transparent Communication</h3>
+                        <p>From the initial quote to project completion, we maintain open lines of communication. You'll always know exactly what's happening, when, and why—no roofing jargon, just clear explanations.</p>
+                    </div>
+                </div>
+                
+                <div class="value-center">
+                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lakeland Roofing value stack visualization showing their 4-pillar process">
+                </div>
+                
+                <div class="value-column">
+                    <div class="value-item">
+                        <div class="value-icon">🔨</div>
+                        <h3>Precision Installation</h3>
+                        <p>Our experienced crews use industry-best practices and premium materials. Every shingle, flashing, and seal is placed with exacting standards for maximum durability and weather resistance.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">✨</div>
+                        <h3>Impeccable Cleanup</h3>
+                        <p>We treat your property with respect. Our meticulous cleanup process ensures no debris, nails, or materials are left behind. Your landscaping remains untouched and your property cleaner than we found it.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="value-cta">
+                <a href="#final-cta" class="btn">Start Your Project with Confidence</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: BEFORE & AFTER -->
+    <section class="before-after">
+        <div class="container">
+            <div class="section-title">
+                <h2>Quality You Can See: The Lakeland Roofing Transformation</h2>
+            </div>
+            
+            <div class="comparison-container">
+                <div class="comparison-box before-box">
+                    <div class="comparison-label before-label">BEFORE: Damaged & Leaking Roof</div>
+                    <div class="comparison-icon">💧</div>
+                    <h3>Worn, Leaking, and Unreliable</h3>
+                    <p>Many Minocqua homes face weather damage from harsh Wisconsin winters and storms. Old, worn-out shingles lead to leaks, interior water damage, and compromised structural integrity. Without proper attention, small issues quickly become expensive repairs.</p>
+                </div>
+                
+                <div class="comparison-box after-box">
+                    <div class="comparison-label after-label">AFTER: Lakeland Roofing Solution</div>
+                    <div class="comparison-icon">✅</div>
+                    <h3>Sealed, Durable, and Warrantied</h3>
+                    <p>Our precision installation uses premium materials designed for Wisconsin's climate. Proper ventilation, ice/water shield, and high-wind rated shingles create a roof that's not just repaired, but comprehensively upgraded for decades of reliable protection with transferable warranties.</p>
+                </div>
+            </div>
+            
+            <div class="before-after-cta">
+                <a href="#final-cta" class="btn">Request Your Free Quote Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: VIDEO TESTIMONIAL -->
+    <section class="video-testimonial">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Video Reviews: Why 'Done Right' Matters</h2>
+                <p class="section-subtitle">Hear directly from satisfied homeowners about the Lakeland Roofing difference—transparency, precision, and lasting results.</p>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-player">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1586773860418-dc22f8b874bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Video testimonial thumbnail - Homeowner discussing their roof replacement">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">Click to watch the full testimonial (3:42 min)</div>
+                </div>
+                
+                <div class="video-content">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <h3>"They Delivered Exactly What They Promised"</h3>
+                    <p>"After the big storm last spring, we had damage that three other companies said required a full replacement. Brad from Lakeland Roofing took the time to actually inspect it and showed us how we could repair just the damaged sections, saving us over $8,000.</p>
+                    <p><strong>The communication was exceptional</strong>—daily updates, photos of the progress, and they even caught a ventilation issue that would have caused problems down the road. What impressed me most was their cleanup; you couldn't tell they'd been there except for our beautiful new roof."</p>
+                    <div class="video-author">— Robert and Jean W., Verified Customers</div>
+                    <div class="video-label">Video Testimonial</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Common Questions & Warranty Clarity</h2>
+                <p class="section-subtitle">Addressing the important details on estimates, warranties, and our roofing process.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        How quickly can I get an estimate?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically provide same-day or next-day estimates. As Mark R. mentioned in his review, we responded within 2 hours and had his estimate completed within 4 days. We prioritize getting you accurate pricing quickly so you can make informed decisions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's included in your warranty?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our workmanship warranty covers labor for 10 years, and material warranties range from 25-50 years depending on the shingle grade selected. All warranties are fully transferable if you sell your home, adding value to your property.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does a typical roof replacement take?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most residential roofs are completed in 1-2 days. As Peter T. noted, we reshingled his roof in one day. We coordinate efficiently to minimize disruption while ensuring every detail receives proper attention.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you handle insurance claims for storm damage?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we work directly with insurance companies and can help navigate the entire claims process. We document all damage thoroughly and provide the detailed reports insurers require for approval.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do you protect my property during the project?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use protective coverings for landscaping, magnetic nail sweepers to collect every fastener, and dedicated dump trailers to contain debris. As Bonnie H. mentioned, we didn't damage a single plant in her extensive flower gardens.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What makes Lakeland Roofing different from other companies?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>As a family-owned business since 1975, we combine decades of local expertise with personalized service. Brad and his team personally oversee every project, ensuring the quality that has earned us 200+ 5-star reviews. We're not a corporate chain—we're your neighbors who truly care about our community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: FINAL CTA -->
+    <section id="final-cta" class="final-cta">
+        <div class="container">
+            <div class="cta-container">
+                <div class="cta-content">
+                    <div class="star-rating stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <h2>Ready for a Roof That is Truly Done Right?</h2>
+                    <p class="cta-subtitle">Schedule your <strong>free, zero-obligation estimate</strong> today. We guarantee transparent pricing and quality work, every time—just ask our 200+ 5-star reviewers.</p>
+                    
+                    <a href="tel:5555555555" class="phone-cta">
+                        <i class="fas fa-phone"></i> Call Us Directly: (555) 555-5555
+                    </a>
+                    
+                    <p>Since 1975, we've served over 8,000 homes and businesses in Minocqua and surrounding areas. Family-owned, locally trusted, and committed to excellence in every roofing project.</p>
+                </div>
+                
+                <div class="cta-form">
+                    <h3>Get Your Free Estimate</h3>
+                    <p>Complete this form and we'll contact you within 2 hours to schedule your free roof assessment.</p>
+                    
+                    <form id="lead-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="(555) 555-5555" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Property Address & Service Needed</label>
+                            <textarea id="address" class="form-control" placeholder="E.g., 123 Main St, Minocqua, WI - Need roof inspection after recent storm" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn submit-btn">Schedule Free Estimate Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 12: FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="#" class="logo">
+                    <i class="fas fa-home"></i> Lakeland Roofing Inc.
+                </a>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">© 2025. Lakeland Roofing Inc. All Rights Reserved.</div>
+                <div class="footer-links">
+                    <a href="https://www.lakelandroofinginc.com/">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.lakelandroofinginc.com/">Terms of Service</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.lakelandroofinginc.com/">Cookies Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+        
+        // Form Submission
+        document.getElementById('lead-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your request! We will contact you within 2 hours to schedule your free roof estimate.');
+            this.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Video play button functionality
+        document.querySelector('.play-button').addEventListener('click', function() {
+            alert('In a live implementation, this would open a modal or redirect to a video player. For this demo, we\'re showing a placeholder action.');
+        });
+    </script>
+</body>
+</html>
