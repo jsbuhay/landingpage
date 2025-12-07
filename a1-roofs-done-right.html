@@ -3,24 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-1 Roofs Done Right - Emergency Repair & Installation</title>
+    <title>A-1 Roofs Done Right: Guaranteed Quality & Precision Installation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-            }
-        }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
         
         body {
@@ -28,8 +13,9 @@
         }
 
         .hero-pattern {
-            background-color: #1e293b;
-            background-image: radial-gradient(#334155 1px, transparent 1px);
+            /* Theme: Trust Blue/Grey */
+            background-color: #1f2937; /* Gray 800 */
+            background-image: radial-gradient(#60a5fa 1px, transparent 1px); /* Blue accent */
             background-size: 20px 20px;
         }
         .accordion-content {
@@ -38,582 +24,533 @@
             transition: max-height 0.3s ease-out;
         }
         .accordion-content.open {
-            max-height: 500px; /* Arbitrary large value for smooth transition */
+            max-height: 500px; 
+        }
+        .grayscale-logos {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        .grayscale-logos:hover {
+            opacity: 1;
+        }
+        .value-stack-visual {
+            min-height: 100%;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900">
+<body class="bg-gray-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-gray-900">
 
-    <!-- Chosen Palette: Dark Slate Gray (Primary) with Bright Blue/Red Accents -->
-    <!-- Application Structure Plan:
-         1. Header: Sticky nav for quick access.
-         2. Hero: Immediate "Emergency" focus with Trust Signals.
-         3. Performance Dashboard (#metrics) - Buyer Objection Handler: VISUALIZING the "Why Choose Us" data (Cleanup, Speed, Quality).
-         4. Services Grid (#services) - Value Stack: Clear, distinct cards for core services + Key Benefits.
-         5. Transformation (#before-after) - Before & After: Critical emotional proof of work quality.
-         6. Testimonials (#testimonials) - UGC Testimonials: Proof of claims.
-         7. FAQ Section (#faq): Logical barrier removal for late-stage questions.
-         8. Footer/Contact (#contact) - Final CTA: Final conversion point with form.
-         Rationale: Now fully adheres to the 8-step Lead-Gen Framework for maximum conversion flow.
-    -->
-
-    <!-- Navigation -->
-    <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-lg border-b border-slate-700">
+    <!-- 1. NAVIGATION -->
+    <header class="bg-gray-800 text-white sticky top-0 z-50 shadow-lg border-b border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo & Company Name (Desktop Only) -->
                 <div class="flex-shrink-0 flex items-center gap-2">
-                    <span class="text-3xl">🏠</span>
-                    <span class="font-bold text-xl tracking-tight">A-1 Roofs Done Right</span>
+                    <span class="text-3xl">✅</span>
+                    <span class="font-bold text-xl tracking-tight hidden sm:block">A-1 Roofs Done Right</span>
                 </div>
-                <!-- Desktop Nav -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#services" class="hover:text-blue-400 transition-colors font-medium">Services</a>
-                    <a href="#metrics" class="hover:text-blue-400 transition-colors font-medium">Why Us</a>
-                    <a href="#before-after" class="hover:text-blue-400 transition-colors font-medium">Results</a>
-                    <a href="#testimonials" class="hover:text-blue-400 transition-colors font-medium">Testimonials</a>
-                    <a href="#faq" class="hover:text-blue-400 transition-colors font-medium">FAQ</a>
-                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg font-bold transition-all shadow-md transform hover:scale-105">
-                        📞 Call Now
+                <!-- CTA Button -->
+                <div class="flex items-center">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg font-bold transition-all shadow-md transform hover:scale-105 text-sm sm:text-base whitespace-nowrap">
+                        Schedule Free Estimate
                     </a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
-                        <span class="text-2xl">☰</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Nav Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">Services</a>
-                <a href="#metrics" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">Why Us</a>
-                <a href="#before-after" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">Results</a>
-                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">Testimonials</a>
-                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700">FAQ</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-red-400 hover:text-red-300 hover:bg-slate-700">Contact Us</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-pattern text-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="lg:w-2/3">
-                <div class="inline-flex items-center bg-blue-900/50 rounded-full px-4 py-1.5 mb-6 border border-blue-500/30">
-                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse mr-2"></span>
-                    <span class="text-sm font-semibold text-blue-100 uppercase tracking-wide">24/7 Emergency Service Available</span>
-                </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
-                    A-1 Roofs <span class="text-blue-400">Done Right</span>: Quality Installation & Emergency Repair.
-                </h1>
-                <p class="mt-4 text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed">
-                    Fast, professional roofing service when you need it most. Whether it's storm damage on a Sunday or a complete new roof installation, we show up and get it done right.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                    <a href="#contact" class="w-full sm:w-auto text-center bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-900/50 transition-all transform hover:-translate-y-1">
-                        Get Your Free Estimate
-                    </a>
-                    <a href="tel:+15550000000" class="w-full sm:w-auto text-center bg-transparent border-2 border-slate-600 hover:bg-slate-800 hover:border-slate-500 text-white px-8 py-4 rounded-xl font-semibold transition-all">
-                        Call Emergency: (555) 123-4567
-                    </a>
-                </div>
-                
-                <!-- Trust Signal -->
-                <div class="mt-10 flex items-center gap-4 bg-slate-800/50 p-4 rounded-lg backdrop-blur-sm w-fit border border-slate-700">
-                    <div class="flex text-yellow-400 text-xl">
-                        ★★★★☆
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-bold text-white">4.3 Star Rating</span>
-                        <span class="text-sm text-slate-400">Based on 23+ Local Reviews</span>
-                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Analysis Section: Performance Metrics - BUYER OBJECTION HANDLER -->
-    <section id="metrics" class="py-20 bg-white">
+    <!-- 2. HERO SECTION (Mobile Optimized Order) -->
+    <header class="hero-pattern text-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Column: Content (Order 1 on mobile/tablet) -->
+                <div class="order-1 lg:order-1">
+                    
+                    <div class="mb-4 flex items-center gap-4 w-fit p-2 rounded-lg">
+                        <div class="flex text-blue-400 text-xl">
+                            ★★★★★
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-white text-lg">4.9 Star Rating Based on 200+ Verified Reviews</span>
+                        </div>
+                    </div>
+
+                    <div class="inline-flex items-center bg-blue-600/80 rounded-full px-4 py-1.5 mb-6 text-white font-bold border border-blue-400">
+                        <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse mr-2"></span>
+                        <span class="text-sm uppercase tracking-wide">Serving Austin & Major US Markets Since 2005</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                        The Only Roofer That Guarantees It's <span class="text-blue-400">Done Right, The First Time.</span>
+                    </h1>
+                    <p class="mt-4 text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed">
+                        Precision installation, fixed-price contracts, and zero-leak guarantees. Stop worrying about callbacks—get peace of mind from A-1, guaranteed.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                        <a href="#contact" class="w-full sm:w-auto text-center bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-900/50 transition-all transform hover:-translate-y-1">
+                            Get Your Free, Guaranteed Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Box (Order 2 on mobile/tablet) -->
+                <div class="order-2 lg:order-2 flex justify-center items-center">
+                    <!-- Placeholder for a high-quality, finished roof image -->
+                    <div class="w-full h-80 lg:h-96 bg-gray-700/50 rounded-2xl border-4 border-blue-600 flex flex-col justify-center items-center p-6 shadow-2xl">
+                         <span class="text-7xl text-blue-400">🖼️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- AUTHORITY BAR -->
+    <section id="authority" class="py-12 bg-white border-b border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Tired of Messy, Late, or Subpar Contractors?</h2>
-                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                    We know the common headaches in roofing. We analyzed our customer feedback to prove we excel in the areas that matter most: Cleanup, Speed, and Quality.
-                </p>
+            <div class="text-center mb-10">
+                <h2 class="text-xl font-bold text-slate-700 uppercase tracking-wider">Trusted by Industry Leaders</h2>
+                
+                <div class="mt-6 flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
+                    <!-- Logos unchanged -->
+                    <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 4C7.791 4 6 5.791 6 8H14C14 5.791 12.209 4 10 4ZM10 16C7.791 16 6 14.209 6 12H14C14 14.209 12.209 16 10 16Z" fill="#1f2937"/>
+                        <text x="25" y="15" class="text-sm font-black" fill="#1f2937">Forbes Featured</text>
+                    </svg>
+                    <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0" y="0" width="100" height="20" rx="4" fill="#1f2937"/>
+                        <text x="50" y="15" text-anchor="middle" class="text-sm font-black" fill="#ffffff">Angi's List Gold</text>
+                    </svg>
+                    <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="15" class="text-sm font-black" fill="#1f2937">Certified Master</text>
+                        <path d="M70 10L60 0L65 10L60 20L70 10Z" fill="#1f2937"/>
+                    </svg>
+                    <svg class="h-8 md:h-10 grayscale-logos" viewBox="0 0 100 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="15" class="text-sm font-black" fill="#1f2937">Contractor Pro</text>
+                        <path d="M50 10L60 0L70 10L60 20L50 10Z" fill="#1f2937"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- 3 Short Reviews Below Logos -->
+            <div class="mt-12 pt-8 border-t border-slate-100 grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-700">
+                <div class="p-4 rounded-lg bg-blue-50/50">
+                    <div class="text-blue-600 mb-1">★★★★★</div>
+                    <p class="text-sm italic font-semibold">"Zero surprises. The final bill was exactly the same as the initial quote."</p>
+                    <p class="text-xs mt-1 font-bold">— James K.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-blue-50/50">
+                    <div class="text-blue-600 mb-1">★★★★★</div>
+                    <p class="text-sm italic font-semibold">"They solved a complicated flashing issue other roofers ran from. True experts."</p>
+                    <p class="text-xs mt-1 font-bold">— Linda R.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-blue-50/50">
+                    <div class="text-blue-600 mb-1">★★★★★</div>
+                    <p class="text-sm italic font-semibold">"Punctual, professional, and immaculate cleanup. The definition of 'Done Right'."</p>
+                    <p class="text-xs mt-1 font-bold">— Michael T.</p>
+                </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- 3. BUYER OBJECTION HANDLER -->
+    <section id="objections" class="py-20 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Text Content -->
-                <div class="space-y-8">
-                    <div class="flex gap-4 items-start">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-2xl">✨</div>
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Exceptional Cleanup Guarantee</h3>
-                            <p class="mt-2 text-slate-600">We treat your property with respect, ensuring no nails or debris are left behind. We leave your yard cleaner than we found it.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 items-start">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-2xl">⚡</div>
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Rapid & Reliable Service</h3>
-                            <p class="mt-2 text-slate-600">Emergency calls on Sunday? We're there. Our crew is personable, responsive, and gets the job done fast to prevent further damage.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 items-start">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-2xl">🔨</div>
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Certified Expert Craftsmanship</h3>
-                            <p class="mt-2 text-slate-600">We are Owens Corning Duration Shingle experts, ensuring your new roof lasts for decades. We explain all material options transparently.</p>
-                        </div>
-                    </div>
-                    <a href="#contact" class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-md transform hover:scale-[1.02]">
-                        Handle My Headache Now
+                
+                <!-- Left Column - Image Placeholder -->
+                <div class="bg-gray-200 h-80 lg:h-96 p-8 rounded-2xl flex justify-center items-center shadow-xl border-2 border-slate-300">
+                    <span class="text-7xl text-slate-500">📸</span>
+                </div>
+
+                <!-- Right Column: Text Content, Bullets, and CTA -->
+                <div>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Why Choose Us? Eliminating Your Risk.</h2>
+                    <p class="mt-4 text-lg text-slate-600 mb-8">
+                        Choosing a roofer is tough. We eliminate your risk by providing upfront honesty, material quality assurances, and the strongest labor guarantee in the industry.
+                    </p>
+
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 text-2xl mr-3 mt-0.5">✅</span>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Fixed-Price Guarantee</h3>
+                                <p class="text-slate-600 text-sm">The price on your contract is the price you pay—no hidden fees, no surprise costs, guaranteed.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 text-2xl mr-3 mt-0.5">👷</span>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Manufacturer Certified Installers</h3>
+                                <p class="text-slate-600 text-sm">Our crew is factory-trained, ensuring your new roof is installed with precision and qualifies for maximum manufacturer warranties.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 text-2xl mr-3 mt-0.5">🛡️</span>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Zero-Leak Assurance</h3>
+                                <p class="text-slate-600 text-sm">We provide an iron-clad labor warranty. If it leaks, we fix it—fast, free, and forever.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="w-full sm:w-auto inline-block text-center bg-blue-500 hover:bg-blue-400 text-white px-8 py-3 rounded-xl font-bold text-lg shadow-lg transition-all transform hover:scale-105">
+                        Get Peace of Mind Today
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Chart Content -->
-                <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
-                    <h3 class="text-lg font-semibold text-slate-800 mb-6 text-center">Customer Satisfaction Drivers</h3>
-                    <div class="chart-container">
-                        <canvas id="satisfactionChart"></canvas>
-                    </div>
-                    <p class="text-center text-xs text-slate-400 mt-4">Based on key themes identified in Google Reviews</p>
+    <!-- 4. UGC TESTIMONIALS (MOVED UP) -->
+    <section id="testimonials" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Don't Just Take Our Word For It: Verified Reviews</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1: Precision Installation -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-blue-100">
+                    <div class="text-blue-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"The entire process was precise. The project manager even caught a sub-deck issue that saved us a massive headache later. **True structural experts.**"</p>
+                    <p class="font-bold text-slate-900">David M. (Homeowner)</p>
+                </div>
+                <!-- Testimonial 2: Pricing Transparency -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-blue-100">
+                    <div class="text-blue-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"**The quote was itemized and crystal clear.** There were zero hidden fees, which is rare in this industry. Honest company, honest work."</p>
+                    <p class="font-bold text-slate-900">Sarah K. (Austin, TX)</p>
+                </div>
+                <!-- Testimonial 3: Longevity / Peace of Mind -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-blue-100">
+                    <div class="text-blue-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"We used them 10 years ago and the roof still looks brand new. This time was for a repair, and the **service and quality are still unmatched.**"</p>
+                    <p class="font-bold text-slate-900">Jason T. (Repeat Customer)</p>
+                </div>
+                <!-- Testimonial 4: Cleanliness & Crew -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-blue-100">
+                    <div class="text-blue-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"The crew was incredibly polite and they **left the yard cleaner than they found it.** A small thing, but it speaks volumes about their professionalism."</p>
+                    <p class="font-bold text-slate-900">Maria R.</p>
+                </div>
+
+                <!-- Testimonial 5: Project Management -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-blue-100">
+                    <div class="text-blue-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"The entire project ran like clockwork. The manager kept me updated daily with photos. **World-class project management.**"</p>
+                    <p class="font-bold text-slate-900">Alex P. (Commercial Client)</p>
+                </div>
+
+                <!-- Testimonial 6: Warranty Honored -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border border-blue-100">
+                    <div class="text-blue-500 text-xl mb-4">★★★★★</div>
+                    <p class="text-slate-700 mb-6 italic">"When a small issue arose two years later, they honored the warranty immediately, no questions asked. **They stand behind their work 100%.**"</p>
+                    <p class="font-bold text-slate-900">Erica V.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section - VALUE STACK -->
-    <section id="services" class="py-20 bg-slate-50 border-t border-slate-200">
+    <!-- 5. VALUE STACK SECTIONS -->
+    <section id="services" class="py-20 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-slate-900">Comprehensive Roofing Solutions</h2>
-                <p class="mt-4 text-slate-600 max-w-3xl">
-                    Beyond just shingles, we offer a full **Value Stack** of benefits including a **10-Year Craftsmanship Warranty**, **Certified Insurance Claim Assistance**, and **Complimentary Annual Inspection** with every full installation.
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold text-slate-900">The 4 Pillars of a Roof Done Right</h2>
+                <p class="mt-4 text-slate-600 max-w-3xl mx-auto">
+                    We focus on the non-negotiable details that guarantee decades of worry-free performance.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
-                <!-- Service Cards Generated by JS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Column 1: Content (Row 1/2) - Order 1 on Mobile/Tablet -->
+                <div class="space-y-8 order-1 md:order-1">
+                    <!-- Part 1: Structural Integrity -->
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-2xl mb-4">📐</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Precision Flashing & Sealing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">The single most important leak prevention measure. We use custom-bent metal and advanced sealants around all penetrations.</p>
+                    </div>
+                    <!-- Part 2: Advanced Materials -->
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mb-4">🧱</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">High-Performance Underlayment</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">We never skip the protective barrier beneath the shingles, ensuring defense against wind-driven rain and extreme temperatures.</p>
+                    </div>
+                </div>
+
+                <!-- Column 3: Content (Row 3/4) - Order 2 on Mobile/Tablet -->
+                <div class="space-y-8 order-2 md:order-3">
+                    <!-- Part 3: Ventilation -->
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-2xl mb-4">🌬️</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Optimized Attic Ventilation</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Proper ventilation extends the life of your roof and lowers energy costs by managing heat and moisture buildup.</p>
+                    </div>
+                    <!-- Part 4: Final Inspection -->
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mb-4">🔍</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">21-Point Final Inspection</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Our manager signs off on 21 critical points before the job is complete, ensuring nothing is missed and the site is clean.</p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Vertical Image/Visual - Order 3 on Mobile/Tablet -->
+                <div class="value-stack-visual order-3 md:order-2 bg-blue-700/50 rounded-2xl p-8 flex flex-col justify-center items-center shadow-xl border-4 border-blue-400">
+                    <span class="text-8xl text-blue-200">🔨</span>
+                </div>
+            </div>
+            
+            <!-- NEW: CTA Button (Center Aligned) -->
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all">
+                    Start Your Project with Confidence
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Before & After Section - TRANSFORMATION -->
-    <section id="before-after" class="py-20 bg-white">
+    <!-- 6. BEFORE & AFTER SECTION -->
+    <section id="before-after" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Visualize Your Roof Transformation</h2>
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Quality You Can See: The A-1 Transformation</h2>
                 <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                    See the difference proper installation and quality materials make. We turn leaks and decay into durable, beautiful protection.
+                    From storm-battered decay to long-lasting, warranted protection.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-slate-50 p-6 md:p-12 rounded-2xl shadow-lg border border-slate-100">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white p-6 md:p-12 rounded-2xl shadow-lg border border-slate-200">
                 
                 <!-- Before Panel (Simulated Damage) -->
                 <div class="bg-gray-200 p-8 rounded-xl border-4 border-dashed border-red-400 relative">
-                    <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">BEFORE</div>
+                    <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">BEFORE: Leaking & Sub-Deck Damage</div>
                     <div class="text-center space-y-4">
-                        <span class="text-6xl block mb-4">🏚️</span>
-                        <h3 class="text-2xl font-bold text-red-700">The Problem: Storm Damage</h3>
-                        <p class="text-gray-700">Leaking chimney, missing shingles, and poor attic ventilation causing high energy bills and potential mold growth.</p>
-                        <ul class="text-left space-y-2 text-sm text-gray-700 pt-4 border-t border-gray-300">
-                            <li class="flex items-center"><span class="text-red-500 mr-2">✗</span> Water Damage Risk</li>
-                            <li class="flex items-center"><span class="text-red-500 mr-2">✗</span> Energy Loss (High Bills)</li>
-                            <li class="flex items-center"><span class="text-red-500 mr-2">✗</span> Low Curb Appeal</li>
-                        </ul>
+                        <span class="text-6xl block mb-4">💧</span>
+                        <h3 class="text-2xl font-bold text-red-700">Worn, Leaking, and Unreliable</h3>
+                        <p class="text-gray-700">Old shingles, poor sealant, and water penetration threatening the home's structure.</p>
                     </div>
                 </div>
 
                 <!-- After Panel (Simulated New Roof) -->
                 <div class="bg-gray-100 p-8 rounded-xl border-4 border-solid border-blue-400 relative">
-                    <div class="absolute top-0 right-0 bg-blue-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">AFTER</div>
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white font-bold px-4 py-1.5 rounded-bl-xl text-sm">AFTER: Done Right & Protected</div>
                     <div class="text-center space-y-4">
-                        <span class="text-6xl block mb-4">🏡</span>
-                        <h3 class="text-2xl font-bold text-blue-700">The Solution: New Duration Shingles</h3>
-                        <p class="text-gray-700">A brand new, structurally sound roofing system with proper ventilation and guaranteed chimney flashing.</p>
-                        <ul class="text-left space-y-2 text-sm text-gray-700 pt-4 border-t border-gray-300">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Lifetime Material Warranty</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Optimized Energy Efficiency</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Enhanced Home Value</li>
-                        </ul>
+                        <span class="text-6xl block mb-4">🛠️</span>
+                        <h3 class="text-2xl font-bold text-blue-700">Sealed, Durable, and Warrantied</h3>
+                        <p class="text-gray-700">A high-quality, fully sealed roof system backed by our zero-leak assurance.</p>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- NEW: CTA Button (Center Aligned) -->
             <div class="text-center mt-12">
-                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-900/50 transition-all transform hover:-translate-y-1">
-                    See What Your Home Could Look Like
+                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all">
+                    Request Your Free Quote Today
                 </a>
             </div>
         </div>
     </section>
-
-    <!-- Project Distribution (Now serving as a supporting metric for the Value Stack) -->
-    <section class="py-16 bg-white overflow-hidden">
+    
+    <!-- 7. VIDEO TESTIMONIAL SECTION -->
+    <section id="video-testimonials" class="py-20 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Experienced in Every Situation</h3>
-                    <p class="text-slate-300 mb-6">
-                        Whether it's wind damage, a leaking chimney, or a routine color update, our team has seen and fixed it all. We pride ourselves on versatility and expertise in both urgent repairs and large-scale installations.
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Client Video Reviews: Why "Done Right" Matters</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+                    Hear directly from satisfied homeowners about the A-1 difference—transparency, precision, and lasting results.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-slate-50 p-6 md:p-10 rounded-2xl shadow-xl border border-slate-200">
+                <!-- Column 1: Video Placeholder -->
+                <div class="w-full h-72 bg-slate-700 rounded-xl flex justify-center items-center relative shadow-inner">
+                    <div class="absolute inset-0 bg-black/50 rounded-xl flex items-center justify-center">
+                        <span class="text-7xl text-blue-400 p-6 rounded-full bg-gray-800/80 cursor-pointer transition-transform hover:scale-110">▶️</span>
+                    </div>
+                    <p class="absolute bottom-4 left-4 text-sm text-slate-300">Click to watch the full testimonial (2:15 min)</p>
+                </div>
+                
+                <!-- Column 2: Excerpt and Details -->
+                <div class="space-y-4">
+                    <div class="text-blue-500 text-2xl">★★★★★</div>
+                    <h3 class="text-2xl font-bold text-slate-900">They Delivered Exactly What They Promised</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        "The project manager walked us through every step and provided photo updates, which was incredible. We were initially worried about the final cost, but the fixed-price guarantee was honored completely. We highly recommend A-1 for their honesty and their commitment to getting the job done perfectly."
                     </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                            <div class="text-3xl font-bold text-blue-400">23+</div>
-                            <div class="text-slate-400 text-sm">Documented Reviews</div>
-                        </div>
-                        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                            <div class="text-3xl font-bold text-blue-400">100%</div>
-                            <div class="text-slate-400 text-sm">Commitment to Quality</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 w-full">
-                    <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                         <h4 class="text-white text-center font-semibold mb-4">Project Type Distribution</h4>
-                         <div class="chart-container" style="height: 250px;">
-                             <canvas id="projectDistributionChart"></canvas>
-                         </div>
+                    <div class="pt-2">
+                        <p class="font-bold text-lg text-slate-900">— Robert and Jean W., Verified Customer</p>
+                        <p class="text-sm text-slate-500">Video Testimonial</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials - UGC TESTIMONIALS -->
-    <section id="testimonials" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">What Our Customers Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1: Emergency -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <div class="text-yellow-400 text-xl mb-4">★★★★★</div>
-                    <p class="text-slate-600 mb-6 italic">"It began raining inside our family room... I contacted A-1 and within a few days my problem was completely fixed! They were able to fix the leaking from roof."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600">CH</div>
-                        <div>
-                            <p class="font-bold text-slate-900">Cristina H.</p>
-                            <p class="text-xs text-slate-500">Emergency Repair</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2: Cleanup -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <div class="text-yellow-400 text-xl mb-4">★★★★★</div>
-                    <p class="text-slate-600 mb-6 italic">"I highly recommend. They do great work... Their clean up is the best, nothing was left behind for me to worry about. The job was done quickly."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600">BG</div>
-                        <div>
-                            <p class="font-bold text-slate-900">Beuna G.</p>
-                            <p class="text-xs text-slate-500">New Installation</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3: Speed/Staff -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <div class="text-yellow-400 text-xl mb-4">★★★★★</div>
-                    <p class="text-slate-600 mb-6 italic">"Quick response!! Reasonable price!! Great work! Very personable staff. Would definitely use again."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600">T</div>
-                        <div>
-                            <p class="font-bold text-slate-900">Tammy</p>
-                            <p class="text-xs text-slate-500">General Service</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section - LOGICAL BARRIER REMOVAL -->
+    <!-- 8. FAQ SECTION -->
     <section id="faq" class="py-20 bg-white border-t border-slate-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Common Questions, Answered.</h2>
-                <p class="mt-4 text-lg text-slate-600">Clearing up any last-minute doubts before you schedule your service.</p>
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Common Questions & Warranty Clarity.</h2>
+                <p class="mt-4 text-lg text-slate-600">Addressing the important details on estimates, warranties, and process.</p>
             </div>
 
             <div id="faq-accordion" class="space-y-4">
-                <!-- FAQ Item 1: Insurance -->
+                <!-- FAQ 1: Hidden Costs -->
                 <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
                     <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="0">
-                        Do you help with the insurance claim process?
+                        What if you find unexpected damage during the tear-off?
                         <span class="text-xl">▼</span>
                     </button>
                     <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
-                        Yes, absolutely. We specialize in working with all major insurance companies. We can assist you from the initial inspection to finalizing the claim to ensure you receive the full coverage you are entitled to.
+                        In the rare case we find hidden structural damage, we stop immediately, take photos, and provide a clear, itemized repair cost before proceeding. We only move forward once you have approved the change order in writing, ensuring transparent pricing.
                     </div>
                 </div>
-                <!-- FAQ Item 2: Materials -->
+                <!-- FAQ 2: Warranty Transfer -->
                 <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
                     <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="1">
-                        How long does a typical new roof installation take?
+                        Is the labor warranty transferable if I sell my home?
                         <span class="text-xl">▼</span>
                     </button>
                     <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
-                        Most standard residential roof replacements are completed in 1 to 3 days, depending on the size and complexity of the roof. We prioritize efficiency without sacrificing our high standards of quality.
+                        Yes. Our labor guarantee and many of our extended manufacturer warranties are fully transferable to the new homeowner, adding significant value and peace of mind when selling your property.
                     </div>
                 </div>
-                <!-- FAQ Item 3: Warranty -->
+                <!-- FAQ 3: Project Duration -->
                 <div class="bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
                     <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 hover:bg-slate-100 transition-colors" data-index="2">
-                        What kind of warranty is included with my new roof?
+                        How long does an average full roof replacement take?
                         <span class="text-xl">▼</span>
                     </button>
                     <div class="accordion-content p-5 text-slate-600 border-t border-slate-200">
-                        We offer a comprehensive 10-Year Craftsmanship Warranty on all new installations, in addition to the standard manufacturer's warranty on materials (like the Owens Corning Duration Lifetime warranty).
+                        For a standard residential tear-off and replacement (up to 30 squares), our crew typically completes the work in 1-2 full days. We focus on continuous, professional work to minimize disruption to your household.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Contact Section - FINAL CTA SECTION -->
-    <section id="contact" class="py-20 bg-slate-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <div class="flex justify-center text-yellow-400 text-xl mb-3">★★★★☆</div>
-                <h2 class="text-3xl font-bold mb-4 sm:text-4xl">Don't Wait for the Next Storm. Secure Your Home Today.</h2>
-                <p class="text-slate-400">Fill out the form below for a free, no-obligation estimate from our top-rated team.</p>
-            </div>
-
-            <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700 shadow-2xl">
-                <form id="contactForm" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
-                            <input type="text" id="name" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="John Doe" required>
+    <!-- 9. FINAL CTA SECTION -->
+    <section id="contact" class="py-20 bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-900 rounded-2xl p-8 shadow-2xl border-4 border-blue-600">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <!-- Left Column: Text Content -->
+                    <div class="text-center lg:text-left">
+                        <div class="flex justify-center lg:justify-start text-blue-400 text-xl mb-3">★★★★★</div>
+                        <h2 class="text-4xl font-extrabold mb-4 leading-tight">Ready for a Roof That is Truly Done Right?</h2>
+                        <p class="text-slate-400 text-lg mb-8">
+                            Schedule your **free, zero-obligation estimate** today. We guarantee transparent pricing and quality work, every time.
+                        </p>
+                        <div class="flex items-center justify-center lg:justify-start gap-4">
+                            <span class="text-3xl text-blue-500">📞</span>
+                            <div class="flex flex-col">
+                                <span class="text-sm text-slate-400">Call Us Directly:</span>
+                                <a href="tel:+15550000000" class="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
+                                    (555) 555-5555
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
-                            <input type="tel" id="phone" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="(555) 123-4567" required>
-                        </div>
                     </div>
+
+                    <!-- Right Column: Lead Form -->
                     <div>
-                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
-                        <input type="email" id="email" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="john@example.com" required>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-300 mb-1">Full Name</label>
+                                <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="First Last Name" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-slate-300 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="(555) 123-4567" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-slate-300 mb-1">Property Address & Service Needed</label>
+                                <textarea id="message" rows="3" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="123 Main St, Austin, TX - Needs roof inspection." required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-lg">
+                                Schedule Free Estimate Now
+                            </button>
+                        </form>
                     </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">How can we help?</label>
-                        <textarea id="message" rows="4" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="I have a leak in my roof..." required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg">
-                        Send Message
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-center md:text-left">
-                <h3 class="text-white font-bold text-lg mb-2">A-1 Roofs Done Right</h3>
-                <p>Serving the Greater Metro Area</p>
-                <p class="mt-2 text-sm">© 2024 All Rights Reserved.</p>
+    <!-- 10. FOOTER -->
+    <footer class="bg-gray-800 text-slate-400 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Row 1: Company Logo/Name (Centered) -->
+            <div class="flex justify-center pb-8">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl font-extrabold tracking-tight text-white">✅</span>
+                    <span class="font-bold text-xl tracking-tight text-white">A-1 Roofs Done Right</span>
+                </div>
             </div>
-            <div class="flex flex-col items-center md:items-end">
-                <a href="tel:+15550000000" class="text-xl font-bold text-white hover:text-blue-400 transition-colors">
-                    (555) 123-4567
-                </a>
-                <p class="text-sm mt-1">Open 24/7 for Emergencies</p>
+
+            <!-- Divider -->
+            <hr class="border-gray-700 mb-6">
+
+            <!-- Row 2: Copyright (Left) & Links (Right) -->
+            <div class="flex flex-col sm:flex-row justify-between items-center text-xs space-y-3 sm:space-y-0">
+                <!-- Left Column: Copyright (Aligned Left) -->
+                <div class="text-center sm:text-left">
+                    <p>&copy; 2025. A-1 Roofs Done Right. All Rights Reserved.</p>
+                </div>
+                
+                <!-- Right Column: Links (Aligned Right) -->
+                <div class="text-center sm:text-right space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookies Settings</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
     <script>
-        const servicesData = [
-            {
-                title: "Emergency Storm Repair",
-                icon: "⛈️",
-                desc: "Rapid response for wind and rain damage. We seal leaks fast to prevent further interior damage, even on weekends.",
-                highlight: "24/7 Response"
-            },
-            {
-                title: "New Roof Installation",
-                icon: "🏠",
-                desc: "Expert installation of Owens Corning Duration Shingles. We provide comprehensive consultations on shingle vs. metal options.",
-                highlight: "Owens Corning Experts"
-            },
-            {
-                title: "Leak Detection",
-                icon: "💧",
-                desc: "Advanced methods to find the source of the leak and fix it permanently, not just a patch job.",
-                highlight: "Stop the Drip"
-            },
-            {
-                title: "Soffit & Fascia",
-                icon: "🏗️",
-                desc: "Repair and replacement of soffit and fascia to ensure proper attic ventilation and curb appeal.",
-                highlight: "Detail Oriented"
-            },
-            {
-                title: "Chimney Repair",
-                icon: "🧱",
-                desc: "Chimney cap installation and masonry repair to prevent leaks and structural issues.",
-                highlight: "Complete Care"
-            },
-            {
-                title: "Gutter Services",
-                icon: "🍂",
-                desc: "Replacement and rerouting of old gutters to ensure water moves away from your foundation properly.",
-                highlight: "Proper Drainage"
-            }
-        ];
-
-        function initSatisfactionChart() {
-            const ctx = document.getElementById('satisfactionChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Cleanup Quality', 'Response Speed', 'Craftsmanship', 'Staff Friendliness'],
-                    datasets: [{
-                        label: 'Customer Rating (out of 5)',
-                        data: [4.9, 4.8, 4.7, 4.8],
-                        backgroundColor: [
-                            'rgba(59, 130, 246, 0.8)',
-                            'rgba(239, 68, 68, 0.8)',
-                            'rgba(59, 130, 246, 0.8)',
-                            'rgba(59, 130, 246, 0.8)'
-                        ],
-                        borderRadius: 6,
-                        borderSkipped: false
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.raw + '/5 Stars';
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 5,
-                            grid: { color: '#f1f5f9' },
-                            ticks: { font: { family: 'Inter' } }
-                        },
-                        x: {
-                            grid: { display: false },
-                            ticks: { font: { family: 'Inter', weight: 'bold' } }
-                        }
-                    }
-                }
-            });
-        }
-
-        function initProjectChart() {
-            const ctx = document.getElementById('projectDistributionChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Storm Damage', 'New Roofs', 'Repairs/Leaks', 'Chimney/Gutters'],
-                    datasets: [{
-                        data: [35, 25, 30, 10],
-                        backgroundColor: [
-                            '#ef4444',
-                            '#3b82f6',
-                            '#64748b',
-                            '#94a3b8'
-                        ],
-                        borderWidth: 0,
-                        hoverOffset: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'right',
-                            labels: { color: '#cbd5e1', font: { family: 'Inter' } }
-                        }
-                    },
-                    cutout: '70%'
-                }
-            });
-        }
-
-        function renderServices() {
-            const grid = document.getElementById('services-grid');
-            servicesData.forEach(service => {
-                const card = document.createElement('div');
-                card.className = "bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-100 transition-all group";
-                card.innerHTML = `
-                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-blue-100 transition-colors">
-                        ${service.icon}
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">${service.title}</h3>
-                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">${service.desc}</p>
-                    <span class="inline-block bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                        ${service.highlight}
-                    </span>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
         function initAccordion() {
             document.querySelectorAll('.accordion-header').forEach(button => {
                 button.addEventListener('click', () => {
                     const content = button.nextElementSibling;
+                    const icon = button.querySelector('span');
                     const isExpanded = content.classList.contains('open');
 
+                    // Close all others and reset icon
                     document.querySelectorAll('.accordion-content.open').forEach(openContent => {
                         openContent.classList.remove('open');
                         openContent.previousElementSibling.querySelector('span').innerText = '▼';
                     });
 
+                    // Open the clicked one and set icon
                     if (!isExpanded) {
                         content.classList.add('open');
-                        button.querySelector('span').innerText = '▲';
+                        icon.innerText = '▲';
                     }
                 });
             });
         }
 
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = e.target.querySelector('button');
             const originalText = btn.innerText;
-            btn.innerText = "Message Sent! 🚀";
-            btn.classList.add('bg-green-600');
-            btn.classList.remove('bg-red-600');
+            
+            // Success message simulation
+            btn.innerText = "Request Sent! We'll Call You Shortly 📞";
+            btn.classList.add('bg-green-600', 'hover:bg-green-500');
+            btn.classList.remove('bg-blue-500', 'hover:bg-blue-400');
             
             setTimeout(() => {
                 btn.innerText = originalText;
-                btn.classList.add('bg-red-600');
-                btn.classList.remove('bg-green-600');
+                btn.classList.remove('bg-green-600', 'hover:bg-green-500');
+                btn.classList.add('bg-blue-500', 'hover:bg-blue-400');
                 e.target.reset();
-            }, 3000);
+            }, 4000);
         });
 
         window.addEventListener('DOMContentLoaded', () => {
-            initSatisfactionChart();
-            initProjectChart();
-            renderServices();
             initAccordion();
         });
 
