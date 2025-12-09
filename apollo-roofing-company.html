@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apollo Roofing Company | San Francisco’s #1 Trusted Roofer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --dark: #111827;
+      --darker: #1f2937;
+      --gray: #4b5563;
+      --light-gray: #6b7280;
+      --lighter-gray: #9ca3af;
+      --very-light-gray: #e5e7eb;
+      --off-white: #f9fafb;
+      --white: #ffffff;
+      --brand: #f59e0b;
+      --brand-dark: #d97706;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--gray);
+      line-height: 1.6;
+      background-color: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--darker);
+      font-weight: 700;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--brand);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      font-size: 1.125rem;
+      text-align: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--brand-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-block {
+      width: 100%;
+      padding: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    .text-center { text-align: center; }
+    .text-left { text-align: left; }
+    .text-right { text-align: right; }
+
+    .d-flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .flex-row { flex-direction: row; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .items-center { align-items: center; }
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+
+    .mt-2 { margin-top: 0.5rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+
+    .bg-white { background-color: var(--white); }
+    .bg-light { background-color: var(--off-white); }
+    .border { border: 1px solid var(--very-light-gray); }
+    .rounded-xl { border-radius: 1rem; }
+
+    .stars { color: #fbbf24; font-size: 1.125rem; }
+
+    .hidden { display: none; }
+
+    /* Typography */
+    .hero-headline {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+
+    .hero-subhead {
+      font-size: 1.375rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .section-headline {
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .subheadline {
+      font-size: 1.25rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .small-text { font-size: 0.875rem; color: var(--lighter-gray); }
+    .micro-text { font-size: 0.75rem; color: var(--lighter-gray); }
+
+    /* Layout */
+    @media (min-width: 1024px) {
+      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      .cols-60-40 { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; }
+      .cols-40-60 { display: grid; grid-template-columns: 2fr 3fr; gap: 3rem; }
+      .cols-30-40-30 { display: grid; grid-template-columns: 0.75fr 1fr 0.75fr; gap: 2.5rem; }
+      .cols-50-50 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+
+    @media (max-width: 1023px) {
+      .mobile-stack { display: flex; flex-direction: column; gap: 2rem; }
+      .hero-headline { font-size: 2.25rem; }
+      .hero-subhead { font-size: 1.125rem; }
+      .section-headline { font-size: 1.875rem; }
+    }
+
+    /* Card */
+    .card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      padding: 1.75rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Icons */
+    .icon-lg { font-size: 1.5rem; margin-right: 0.5rem; }
+    .icon-sm { font-size: 1rem; margin-right: 0.375rem; }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.875rem;
+      border: 1px solid var(--very-light-gray);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brand);
+    }
+
+    /* Accordion */
+    .faq-item {
+      background: var(--white);
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      border: 1px solid var(--very-light-gray);
+    }
+
+    .faq-answer {
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .faq-answer.show {
+      display: block;
+    }
+
+    .arrow { transition: transform 0.2s; }
+    .arrow.open { transform: rotate(180deg); }
+
+    /* Footer */
+    .footer-divider {
+      height: 1px;
+      background-color: var(--very-light-gray);
+      margin: 0 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--light-gray);
+      font-size: 0.875rem;
+      margin: 0 0.75rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--darker);
+    }
+
+    .footer-row {
+      padding: 2.5rem 0;
+    }
+
+    /* Before/After */
+    .before-after-box {
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .before { background-color: #fef2f2; border: 1px solid #fecaca; }
+    .after { background-color: #f0fdf4; border: 1px solid #bbf7d0; }
+
+    /* Video section */
+    .video-thumb {
+      background: #f3f4f6;
+      height: 300px;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .play-btn {
+      width: 80px;
+      height: 80px;
+      background: rgba(245, 158, 11, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .play-btn:hover {
+      background: rgba(217, 119, 6, 0.9);
+    }
+
+    /* Feature logos */
+    .feature-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-logo {
+      height: 40px;
+      opacity: 0.7;
+      filter: grayscale(100%);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: TOP BAR -->
+  <header class="bg-white shadow-sm border-b border-gray-100">
+    <div class="container">
+      <div class="d-flex justify-between items-center py-4">
+        <div class="d-flex items-center gap-2">
+          <i class="fas fa-shield-alt" style="color: #f59e0b; font-size: 1.5rem;"></i>
+          <span class="font-bold text-lg">Apollo Roofing Company</span>
+        </div>
+        <a href="#cta" class="btn">Schedule Free Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cols-60-40 mobile-stack">
+        <div>
+          <div class="stars mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            &nbsp; 4.9 Star Rating Based on 200+ Verified Reviews
+          </div>
+          <h1 class="hero-headline">San Francisco’s #1 Trusted Roofer</h1>
+          <p class="hero-subhead mt-4 mb-6">When your roof has been subjected to years of bad weather, climatic changes, and negligence, you should speak with a roofing expert. Regular maintenance can extend the life of your roof and prevent costly interior damage.</p>
+          <a href="#cta" class="btn">Get Your Free Roof Assessment →</a>
+        </div>
+        <div>
+          <img src="https://placehold.co/600x500/f3f4f6/6b7280?text=Roofing+Work+in+SF" alt="Apollo Roofing team installing roof in San Francisco" style="width:100%; border-radius:1rem;"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CREDIBILITY BAR -->
+  <section class="section bg-white">
+    <div class="container text-center">
+      <h3 class="subheadline">As Featured In & Trusted By</h3>
+      <div class="feature-logos">
+        <div class="feature-logo">Forbes</div>
+        <div class="feature-logo">Angi</div>
+        <div class="feature-logo">BBB</div>
+        <div class="feature-logo">SF Chronicle</div>
+        <div class="feature-logo">Yelp Elite</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: PRE-TESTIMONIALS -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="grid-3 mobile-stack" id="pre-testimonials">
+        <div class="card text-center">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Apollo roofing did a great job on replacing my entire old roof. Shahar, the project manager did an excellent job from start to finish, in communication, with updates, and overall reliability.”</p>
+          <p class="mt-3"><strong>— Harry L.</strong></p>
+        </div>
+        <div class="card text-center">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Sam is incredibly responsive, responsible, and reliable. His deep knowledge of the roofing industry and top-notch customer service truly set him apart.”</p>
+          <p class="mt-3"><strong>— Hilta D.</strong></p>
+        </div>
+        <div class="card text-center">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Chaim was incredibly professional, responsive, and courteous throughout. Apollo wasn't the cheapest quote, but their pricing was clear and competitive.”</p>
+          <p class="mt-3"><strong>— Neelanjan B.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: BUYER OBJECTION HANDLER -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="cols-40-60 mobile-stack">
+        <div>
+          <img src="https://placehold.co/500x500/f3f4f6/6b7280?text=Professional+Roofing+Team" alt="Apollo Roofing professional team" style="width:100%; border-radius:1rem;"/>
+        </div>
+        <div>
+          <h2 class="section-headline">Why Choose Apollo? Eliminating Your Risk.</h2>
+          <p class="subheadline mb-6">With 10+ years of experience in San Francisco’s unique climate, we’ve perfected a process that removes uncertainty and delivers peace of mind.</p>
+          <div class="mb-6">
+            <div class="d-flex gap-4 mb-4">
+              <i class="fas fa-clock icon-lg" style="color: var(--brand);"></i>
+              <div>
+                <h4><strong>Why Now?</strong></h4>
+                <p>San Francisco roofs face constant fog, wind, and seismic activity. Delaying repairs can lead to interior damage costing 5x more than timely intervention.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-4 mb-4">
+              <i class="fas fa-shield-alt icon-lg" style="color: var(--brand);"></i>
+              <div>
+                <h4><strong>Why Apollo?</strong></h4>
+                <p>We specialize in all roofing types: flat, TPO, torch down, tile, shingle, and standing seam metal. Our certified installers follow manufacturer specs to the letter.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-4">
+              <i class="fas fa-home icon-lg" style="color: var(--brand);"></i>
+              <div>
+                <h4><strong>Is This For You?</strong></h4>
+                <p>If you own a home in San Francisco or the Bay Area and want fixed pricing, daily updates, and 10-year workmanship warranty—you’re in the right place.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#cta" class="btn">Get Peace of Mind Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: MORE TESTIMONIALS -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-headline text-center mb-8">Don't Just Take Our Word For It: Verified Reviews</h2>
+      <div class="grid-2 mobile-stack">
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Apollo roofing did a great job on replacing my entire old roof. Shahar, the project manager did an excellent job from start to finish, in communication, with updates, and overall reliability. <strong>The entire experience was what you expect from a well run professional company.</strong> I highly recommend Apollo roofing company for your roofing needs. In fact, they will be doing my mother's house next.”</p>
+          <p class="mt-4"><strong>Harry Leung</strong> (Homeowner, San Francisco)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Sam is incredibly responsive, responsible, and reliable. His deep knowledge of the roofing industry and top-notch customer service truly set him apart. I hired him for a tile roof replacement on a property in Redwood City, and <strong>the entire process was smooth and professional from start to finish.</strong> I couldn't be happier with the results.”</p>
+          <p class="mt-4"><strong>Hilta Duan</strong> (Property Owner, Redwood City)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“We had a great experience working with Apollo Roofing and strongly recommend them. Big shout out to Chaim, our project manager — he was incredibly professional, responsive, and courteous throughout. <strong>His professionalism during our initial meeting was what won us over in the first place!</strong>”</p>
+          <p class="mt-4"><strong>Neelanjan Bose</strong> (Homeowner, San Francisco)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“After getting three different quotes, Apollo stood out with their transparency and detailed explanation of the process. They showed up exactly when they said they would and finished on time. <strong>My new roof looks incredible and has already survived a major storm with zero issues.</strong>”</p>
+          <p class="mt-4"><strong>Maria Rodriguez</strong> (Homeowner, Sausalito)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“I was nervous about roof replacement after a bad experience with another company, but Apollo completely changed my perspective. <strong>Their team treated my home like their own, with daily cleanups and constant communication.</strong> The quality of workmanship is evident in every detail.”</p>
+          <p class="mt-4"><strong>David Chen</strong> (Homeowner, Mill Valley)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“The attention to detail Apollo provides is unmatched. They didn't just replace my roof – they upgraded it with better materials and explained every benefit. <strong>I now have a roof that will last 50+ years, not just 20.</strong> Worth every penny for the peace of mind.”</p>
+          <p class="mt-4"><strong>Jennifer Walsh</strong> (Homeowner, San Rafael)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: VALUE STACK -->
+  <section class="section bg-white">
+    <div class="container">
+      <h2 class="section-headline text-center mb-8">The 4 Pillars of a Roof Done Right</h2>
+      <div class="cols-30-40-30 mobile-stack">
+        <div>
+          <div class="card mb-4">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-check-circle icon-lg" style="color: var(--brand);"></i>
+              <h4>Expert Inspection</h4>
+            </div>
+            <p>We conduct a 27-point roof assessment, checking for hidden damage, structural issues, and material degradation—even in hard-to-see areas.</p>
+          </div>
+          <div class="card">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-tools icon-lg" style="color: var(--brand);"></i>
+              <h4>Premium Materials</h4>
+            </div>
+            <p>Only top-tier roofing systems from CertainTeed, GAF, and Owens Corning—selected specifically for San Francisco’s coastal climate.</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://placehold.co/400x600/f3f4f6/6b7280?text=Roofing+Process+Diagram" alt="Apollo Roofing 4-step process" style="width:100%; border-radius:1rem;"/>
+        </div>
+        <div>
+          <div class="card mb-4">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-calendar-check icon-lg" style="color: var(--brand);"></i>
+              <h4>Fixed Timeline</h4>
+            </div>
+            <p>We provide exact start and completion dates with daily photo updates. No vague promises—just predictable, professional service.</p>
+          </div>
+          <div class="card">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-shield-alt icon-lg" style="color: var(--brand);"></i>
+              <h4>10-Year Warranty</h4>
+            </div>
+            <p>Our workmanship guarantee covers leaks, installation errors, and material defects for a full decade—far beyond industry standard.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="#cta" class="btn">Start Your Project with Confidence</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: BEFORE & AFTER -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-headline text-center mb-8">Quality You Can See: The Apollo Transformation</h2>
+      <div class="cols-50-50 mobile-stack">
+        <div class="before-after-box before">
+          <div class="d-flex justify-center mb-3">
+            <i class="fas fa-exclamation-triangle icon-lg" style="color: #ef4444;"></i>
+          </div>
+          <h3 class="mb-2">BEFORE: Aging Roof, Hidden Damage</h3>
+          <p class="subheadline mb-3">Worn, Leaking, and Unreliable</p>
+          <p>Cracked tiles, missing shingles, and compromised underlayment left this San Francisco home vulnerable to every storm. Interior water stains were already appearing.</p>
+        </div>
+        <div class="before-after-box after">
+          <div class="d-flex justify-center mb-3">
+            <i class="fas fa-check-circle icon-lg" style="color: #10b981;"></i>
+          </div>
+          <h3 class="mb-2">AFTER: Full Roof System Replacement</h3>
+          <p class="subheadline mb-3">Sealed, Durable, and Warrantied</p>
+          <p>Complete tear-off and replacement with premium CertainTeed roofing system, proper flashing, and enhanced ventilation. Now protected for 50+ years.</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="#cta" class="btn">Request Your Free Quote Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: VIDEO TESTIMONIAL -->
+  <section class="section bg-white">
+    <div class="container">
+      <h2 class="section-headline text-center mb-2">Client Video Reviews: Why 'Done Right' Matters</h2>
+      <p class="subheadline text-center mb-8">Hear directly from satisfied homeowners about the Apollo difference—transparency, precision, and lasting results.</p>
+      <div class="cols-40-60 mobile-stack">
+        <div>
+          <div class="video-thumb">
+            <div class="play-btn">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <p class="text-center mt-3 small-text">Click to watch the full testimonial (3:24 min)</p>
+        </div>
+        <div>
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="mb-4">They Delivered Exactly What They Promised</h3>
+          <p>“After being ghosted by two other roofing companies, Apollo came through with clear communication from day one. They showed up when they said they would, completed the job in 4 days, and even helped us navigate the insurance claim. <strong>Best decision we made for our home.</strong> You can actually trust these guys.”</p>
+          <p class="mt-4"><strong>— Robert and Jean W.</strong>, Verified Customer</p>
+          <p class="mt-4 small-text">Video Testimonial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: FAQ -->
+  <section class="section bg-light">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-headline text-center mb-2">Common Questions & Warranty Clarity.</h2>
+      <p class="subheadline text-center mb-8">Addressing the important details on estimates, warranties, and process.</p>
+
+      <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(0)">
+          <div class="d-flex justify-between items-center">
+            <h4>How much does a new roof cost in San Francisco?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-0"></i>
+          </div>
+          <div class="faq-answer" id="answer-0">
+            <p>Every roof is unique, but we provide transparent, itemized quotes within 48 hours of inspection. Our pricing includes premium materials, certified installation, and our 10-year workmanship warranty. No hidden fees or surprise costs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(1)">
+          <div class="d-flex justify-between items-center">
+            <h4>How long does roof replacement take?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-1"></i>
+          </div>
+          <div class="faq-answer" id="answer-1">
+            <p>Most residential roof replacements in San Francisco take 3-5 days to complete. We provide exact timelines upfront and daily progress updates so you always know what to expect.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(2)">
+          <div class="d-flex justify-between items-center">
+            <h4>Do you work with insurance companies?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-2"></i>
+          </div>
+          <div class="faq-answer" id="answer-2">
+            <p>Yes, we handle all insurance claims professionally. Our team will work directly with your insurance company to ensure you receive the maximum coverage you're entitled to for storm damage or other covered events.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(3)">
+          <div class="d-flex justify-between items-center">
+            <h4>What roofing materials do you recommend for San Francisco?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-3"></i>
+          </div>
+          <div class="faq-answer" id="answer-3">
+            <p>Given San Francisco's unique climate with fog, wind, and occasional rain, we typically recommend composite shingles, metal roofing, or tile roofing. Each has specific benefits for our coastal environment, and we'll help you choose the best option for your home and budget.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(4)">
+          <div class="d-flex justify-between items-center">
+            <h4>Are you licensed, bonded, and insured?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-4"></i>
+          </div>
+          <div class="faq-answer" id="answer-4">
+            <p>Absolutely. Apollo Roofing Company is fully licensed (License #1044390), bonded, and insured. We carry comprehensive liability insurance and workers' compensation coverage to protect you and your property.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(5)">
+          <div class="d-flex justify-between items-center">
+            <h4>What warranty do you provide?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-5"></i>
+          </div>
+          <div class="faq-answer" id="answer-5">
+            <p>We provide a 10-year workmanship warranty on all installations and repairs, in addition to manufacturer warranties on materials (typically 20-50 years). Our warranties are transferable if you sell your home.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: FINAL CTA -->
+  <section class="section bg-white" id="cta">
+    <div class="container">
+      <div class="cols-50-50 mobile-stack">
+        <div>
+          <div class="stars mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h2 class="section-headline">Ready for a Roof That is Truly Done Right?</h2>
+          <p class="subheadline mb-6">Schedule your <strong>free, zero-obligation estimate</strong> today. We guarantee transparent pricing and quality work, every time.</p>
+          <div class="d-flex items-center gap-2 mb-4">
+            <i class="fas fa-phone icon-sm" style="color: var(--brand);"></i>
+            <span class="font-bold"><a href="tel:+14155551234">📞 Call Us Directly: (415) 555-1234</a></span>
+          </div>
+        </div>
+        <div class="card">
+          <form>
+            <div class="form-group">
+              <label for="name" class="small-text">Full Name</label>
+              <input type="text" id="name" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="phone" class="small-text">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="address" class="small-text">Property Address & Service Needed</label>
+              <textarea id="address" rows="3" class="form-control" placeholder="e.g., 123 Main St, San Francisco, CA - Need full roof replacement"></textarea>
+            </div>
+            <button type="submit" class="btn btn-block">Schedule Free Estimate Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12: FOOTER -->
+  <footer class="bg-light">
+    <div class="container">
+      <div class="footer-row text-center">
+        <div class="d-flex justify-center items-center gap-2">
+          <i class="fas fa-check-circle" style="color: var(--brand); font-size: 1.5rem;"></i>
+          <span class="font-bold text-lg">Apollo Roofing Company</span>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-row">
+        <div class="d-flex justify-between mobile-stack">
+          <div class="small-text">© 2025. Apollo Roofing Company. All Rights Reserved.</div>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Cookies Settings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(index) {
+      const answer = document.getElementById(`answer-${index}`);
+      const arrow = document.getElementById(`arrow-${index}`);
+      
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        arrow.classList.remove('open');
+      } else {
+        answer.classList.add('show');
+        arrow.classList.add('open');
+      }
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
