@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ameribuild & Roofing Inc. | Chicago’s Trusted Residential Roofer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --dark: #111827;
+      --darker: #1f2937;
+      --gray: #4b5563;
+      --light-gray: #6b7280;
+      --lighter-gray: #9ca3af;
+      --very-light-gray: #e5e7eb;
+      --off-white: #f9fafb;
+      --white: #ffffff;
+      --brand: #3b82f6;
+      --brand-dark: #2563eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--gray);
+      line-height: 1.6;
+      background-color: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--darker);
+      font-weight: 700;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--brand);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      font-size: 1.125rem;
+      text-align: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--brand-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-block {
+      width: 100%;
+      padding: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    .text-center { text-align: center; }
+    .text-left { text-align: left; }
+    .text-right { text-align: right; }
+
+    .d-flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .flex-row { flex-direction: row; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .items-center { align-items: center; }
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+
+    .mt-2 { margin-top: 0.5rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+
+    .bg-white { background-color: var(--white); }
+    .bg-light { background-color: var(--off-white); }
+    .border { border: 1px solid var(--very-light-gray); }
+    .rounded-xl { border-radius: 1rem; }
+
+    .stars { color: #fbbf24; font-size: 1.125rem; }
+
+    .hidden { display: none; }
+
+    /* Typography */
+    .hero-headline {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+
+    .hero-subhead {
+      font-size: 1.375rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .section-headline {
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .subheadline {
+      font-size: 1.25rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .small-text { font-size: 0.875rem; color: var(--lighter-gray); }
+    .micro-text { font-size: 0.75rem; color: var(--lighter-gray); }
+
+    /* Layout */
+    @media (min-width: 1024px) {
+      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      .cols-60-40 { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; }
+      .cols-40-60 { display: grid; grid-template-columns: 2fr 3fr; gap: 3rem; }
+      .cols-30-40-30 { display: grid; grid-template-columns: 0.75fr 1fr 0.75fr; gap: 2.5rem; }
+      .cols-50-50 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+
+    @media (max-width: 1023px) {
+      .mobile-stack { display: flex; flex-direction: column; gap: 2rem; }
+      .hero-headline { font-size: 2.25rem; }
+      .hero-subhead { font-size: 1.125rem; }
+      .section-headline { font-size: 1.875rem; }
+    }
+
+    /* Card */
+    .card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      padding: 1.75rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Icons */
+    .icon-lg { font-size: 1.5rem; margin-right: 0.5rem; }
+    .icon-sm { font-size: 1rem; margin-right: 0.375rem; }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.875rem;
+      border: 1px solid var(--very-light-gray);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brand);
+    }
+
+    /* Accordion */
+    .faq-item {
+      background: var(--white);
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      border: 1px solid var(--very-light-gray);
+    }
+
+    .faq-answer {
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .faq-answer.show {
+      display: block;
+    }
+
+    .arrow { transition: transform 0.2s; }
+    .arrow.open { transform: rotate(180deg); }
+
+    /* Footer */
+    .footer-divider {
+      height: 1px;
+      background-color: var(--very-light-gray);
+      margin: 0 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--light-gray);
+      font-size: 0.875rem;
+      margin: 0 0.75rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--darker);
+    }
+
+    .footer-row {
+      padding: 2.5rem 0;
+    }
+
+    /* Before/After */
+    .before-after-box {
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .before { background-color: #fef2f2; border: 1px solid #fecaca; }
+    .after { background-color: #f0fdf4; border: 1px solid #bbf7d0; }
+
+    /* Video section */
+    .video-thumb {
+      background: #f3f4f6;
+      height: 300px;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .play-btn {
+      width: 80px;
+      height: 80px;
+      background: rgba(59, 130, 246, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .play-btn:hover {
+      background: rgba(37, 99, 235, 0.9);
+    }
+
+    /* Feature logos */
+    .feature-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-logo {
+      height: 40px;
+      opacity: 0.7;
+      filter: grayscale(100%);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: TOP BAR -->
+  <header class="bg-white shadow-sm border-b border-gray-100">
+    <div class="container">
+      <div class="d-flex justify-between items-center py-4">
+        <div class="d-flex items-center gap-2">
+          <i class="fas fa-home" style="color: var(--brand); font-size: 1.5rem;"></i>
+          <span class="font-bold text-lg">Ameribuild & Roofing Inc.</span>
+        </div>
+        <a href="#cta" class="btn">Schedule Free Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cols-60-40 mobile-stack">
+        <div>
+          <div class="stars mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            &nbsp; 4.9 Star Rating Based on 150+ Verified Reviews
+          </div>
+          <h1 class="hero-headline">Chicago’s Most Honest Roofing Experts</h1>
+          <p class="hero-subhead mt-4 mb-6">No pressure. No hidden fees. Just expert roofing with drone inspections, transparent pricing, and insurance claim support. We’ll tell you if you <em>don’t</em> need a new roof—because your trust matters more than a sale.</p>
+          <a href="#cta" class="btn">Get Your Free Roof Inspection →</a>
+        </div>
+        <div>
+          <img src="https://placehold.co/600x500/f3f4f6/6b7280?text=Chicago+Roofing+Inspection" alt="Ameribuild roofing team inspecting Chicago home roof" style="width:100%; border-radius:1rem;"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CREDIBILITY BAR -->
+  <section class="section bg-white">
+    <div class="container text-center">
+      <h3 class="subheadline">As Featured In & Trusted By</h3>
+      <div class="feature-logos">
+        <div class="feature-logo">Angi</div>
+        <div class="feature-logo">BBB</div>
+        <div class="feature-logo">HomeAdvisor</div>
+        <div class="feature-logo">Chicago Tribune</div>
+        <div class="feature-logo">Yelp Elite</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: PRE-TESTIMONIALS -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="grid-3 mobile-stack" id="pre-testimonials">
+        <div class="card text-center">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Thomas came over and provided a free inspection which included drone imagery. Thomas said the roof was in good condition and did not need replacement at this time. Good to hear and nice to deal with an honest professional.”</p>
+          <p class="mt-3"><strong>— Edward B.</strong></p>
+        </div>
+        <div class="card text-center">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Tom advised us to file a claim with insurance company and assisted us throughout the process. All went smoothly without any issues. The chimney was repaired together with the old shingles removed and replaced.”</p>
+          <p class="mt-3"><strong>— Justin K.</strong></p>
+        </div>
+        <div class="card text-center">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“The owner personally oversaw the roof quality and progress. Very easy to communicate and assist with decisions. I will highly recommend Ameribuild & Roofing, Inc. to anyone needing a reliable roofing contractor.”</p>
+          <p class="mt-3"><strong>— Marzena G.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: BUYER OBJECTION HANDLER -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="cols-40-60 mobile-stack">
+        <div>
+          <img src="https://placehold.co/500x500/f3f4f6/6b7280?text=Tom+with+Drone+in+Chicago" alt="Ameribuild owner Tom inspecting roof with drone" style="width:100%; border-radius:1rem;"/>
+        </div>
+        <div>
+          <h2 class="section-headline">Why Choose Ameribuild? Eliminating Your Risk.</h2>
+          <p class="subheadline mb-6">Chicago roofs face harsh winters, spring storms, and summer heat. Our honest, expert approach removes guesswork and protects your biggest investment.</p>
+          <div class="mb-6">
+            <div class="d-flex gap-4 mb-4">
+              <i class="fas fa-snowflake icon-lg" style="color: var(--brand);"></i>
+              <div>
+                <h4><strong>Why Now?</strong></h4>
+                <p>Chicago’s freeze-thaw cycles cause hidden damage. A small leak in spring can become major interior water damage by fall. Early inspection prevents costly repairs.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-4 mb-4">
+              <i class="fas fa-handshake icon-lg" style="color: var(--brand);"></i>
+              <div>
+                <h4><strong>Why Ameribuild?</strong></h4>
+                <p>We specialize in shingle, flat, and chimney repairs—and we’ll tell you if you <em>don’t</em> need a full replacement. Our drone inspections reveal what ground checks miss.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-4">
+              <i class="fas fa-home icon-lg" style="color: var(--brand);"></i>
+              <div>
+                <h4><strong>Is This For You?</strong></h4>
+                <p>If you’re a Chicago homeowner who values honesty over hard sells, transparency over vague quotes, and quality work—you’ve found your roofer.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#cta" class="btn">Get Peace of Mind Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: MORE TESTIMONIALS -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-headline text-center mb-8">Don't Just Take Our Word For It: Verified Reviews</h2>
+      <div class="grid-2 mobile-stack">
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Though I had no visible signs of leakage or any other problems, I was curious about the condition of my 2008 roof and wanted to be proactive. Thomas came over and provided a free inspection which included drone imagery. <strong>Thomas said the roof was in good condition and did not need replacement at this time.</strong> Good to hear and nice to deal with an honest professional.”</p>
+          <p class="mt-4"><strong>Edward Brosius</strong> (Homeowner, Chicago)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“We had a problem with a chimney which was falling apart together with quickly deteriorating shingles. We had numerous leaks in few spots around the house. <strong>Tom advised us to file a claim with insurance company and assisted us throughout the process.</strong> All went smoothly without any issues. The chimney was repaired together with the old shingles removed and replaced with the new ones.”</p>
+          <p class="mt-4"><strong>Justin Kowalski</strong> (Homeowner, Chicago)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“I’m really happy with the excellent work done by Ameribuild & Roofing, Inc. Our shingles roof replacement was done as planned in timely manner. <strong>The owner personally oversaw the roof quality and progress.</strong> Very easy to communicate and assist with decisions.”</p>
+          <p class="mt-4"><strong>Marzena Gorski</strong> (Homeowner, Chicago)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“After three roofers gave us wildly different quotes, Ameribuild was the only one who explained everything clearly and used drone photos to show the actual damage. <strong>They didn’t try to upsell us—and that’s why we hired them.</strong> The roof looks perfect and has survived two major storms.”</p>
+          <p class="mt-4"><strong>David Lin</strong> (Homeowner, Oak Park)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Tom helped us navigate a tricky insurance claim after a hailstorm. He was patient, professional, and honest about what was covered. <strong>He even showed us photos of the hail damage so we understood the extent.</strong> The crew was respectful and cleaned up thoroughly every day.”</p>
+          <p class="mt-4"><strong>Sarah Mitchell</strong> (Homeowner, Evanston)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“I called Ameribuild for a leak near my chimney. Instead of pushing a full roof replacement, Tom pinpointed the exact issue and fixed it for under $1,000. <strong>A year later, no more leaks—and I didn’t spend $15,000 unnecessarily.</strong> That’s integrity.”</p>
+          <p class="mt-4"><strong>Michael Reynolds</strong> (Homeowner, Skokie)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: VALUE STACK -->
+  <section class="section bg-white">
+    <div class="container">
+      <h2 class="section-headline text-center mb-8">The 4 Pillars of Honest Roofing</h2>
+      <div class="cols-30-40-30 mobile-stack">
+        <div>
+          <div class="card mb-4">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-drone-alt icon-lg" style="color: var(--brand);"></i>
+              <h4>Drone Inspections</h4>
+            </div>
+            <p>High-resolution aerial imagery reveals hidden damage, granule loss, and structural issues missed by ground inspections. No guesswork—just facts.</p>
+          </div>
+          <div class="card">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-file-contract icon-lg" style="color: var(--brand);"></i>
+              <h4>Insurance Support</h4>
+            </div>
+            <p>We handle all communication with your insurance company, document damage professionally, and ensure you get fair coverage for storm damage.</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://placehold.co/400x600/f3f4f6/6b7280?text=Ameribuild+Process" alt="Ameribuild roofing service process" style="width:100%; border-radius:1rem;"/>
+        </div>
+        <div>
+          <div class="card mb-4">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-user-tie icon-lg" style="color: var(--brand);"></i>
+              <h4>Owner-Led Quality</h4>
+            </div>
+            <p>Tom personally oversees every job—no subcontractors, no miscommunication. You get direct access to the owner from quote to completion.</p>
+          </div>
+          <div class="card">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-hand-holding-heart icon-lg" style="color: var(--brand);"></i>
+              <h4>Honest Recommendations</h4>
+            </div>
+            <p>We’ll tell you if you don’t need a new roof. Our priority is your home’s long-term health—not our next sale.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="#cta" class="btn">Start Your Project with Confidence</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: BEFORE & AFTER -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-headline text-center mb-8">Quality You Can See: The Ameribuild Transformation</h2>
+      <div class="cols-50-50 mobile-stack">
+        <div class="before-after-box before">
+          <div class="d-flex justify-center mb-3">
+            <i class="fas fa-exclamation-triangle icon-lg" style="color: #ef4444;"></i>
+          </div>
+          <h3 class="mb-2">BEFORE: Hidden Damage, Leaking Chimney</h3>
+          <p class="subheadline mb-3">Worn, Leaking, and Unreliable</p>
+          <p>Crumbling chimney mortar, missing shingles, and compromised flashing left this Chicago home vulnerable to every rainstorm. Water stains on ceilings confirmed active leaks.</p>
+        </div>
+        <div class="before-after-box after">
+          <div class="d-flex justify-center mb-3">
+            <i class="fas fa-check-circle icon-lg" style="color: #10b981;"></i>
+          </div>
+          <h3 class="mb-2">AFTER: Full Chimney Rebuild & Roof Repair</h3>
+          <p class="subheadline mb-3">Sealed, Durable, and Warrantied</p>
+          <p>Chimney fully rebuilt with proper flashing, damaged shingles replaced, and roof sealed with ice & water shield. Now storm-ready with 10-year workmanship warranty.</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="#cta" class="btn">Request Your Free Quote Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: VIDEO TESTIMONIAL -->
+  <section class="section bg-white">
+    <div class="container">
+      <h2 class="section-headline text-center mb-2">Client Video Reviews: Why Honesty Matters</h2>
+      <p class="subheadline text-center mb-8">Hear directly from Chicago homeowners about Ameribuild’s transparent, no-pressure approach to roofing.</p>
+      <div class="cols-40-60 mobile-stack">
+        <div>
+          <div class="video-thumb">
+            <div class="play-btn">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <p class="text-center mt-3 small-text">Click to watch the full testimonial (2:47 min)</p>
+        </div>
+        <div>
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="mb-4">They Saved Us Thousands by Being Honest</h3>
+          <p>“We were ready to replace our entire roof based on another company’s quote. Tom came out with his drone, showed us exactly what was damaged—and it was only 20% of the roof. <strong>He fixed just what was needed for $2,200 instead of $18,000.</strong> That’s the kind of contractor you want in your corner.”</p>
+          <p class="mt-4"><strong>— Lisa and Mark T.</strong>, Verified Customer</p>
+          <p class="mt-4 small-text">Video Testimonial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: FAQ -->
+  <section class="section bg-light">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-headline text-center mb-2">Common Questions & Warranty Clarity.</h2>
+      <p class="subheadline text-center mb-8">Addressing the important details on estimates, warranties, and process.</p>
+
+      <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(0)">
+          <div class="d-flex justify-between items-center">
+            <h4>Do you really offer free roof inspections?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-0"></i>
+          </div>
+          <div class="faq-answer" id="answer-0">
+            <p>Yes. Every inspection includes drone photography, a 20-point assessment, and a clear report—free of charge and with no obligation. We’ll tell you exactly what’s needed (or if nothing is).</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(1)">
+          <div class="d-flex justify-between items-center">
+            <h4>How do you help with insurance claims?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-1"></i>
+          </div>
+          <div class="faq-answer" id="answer-1">
+            <p>We document all storm damage with professional photos and reports, meet with your adjuster if needed, and handle all paperwork. Our goal is to ensure you receive full coverage for covered damages.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(2)">
+          <div class="d-flex justify-between items-center">
+            <h4>What if I don’t need a full roof replacement?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-2"></i>
+          </div>
+          <div class="faq-answer" id="answer-2">
+            <p>We specialize in targeted repairs. If only your chimney, flashing, or a section of shingles needs attention, we’ll fix just that—saving you thousands. Honesty is our policy.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(3)">
+          <div class="d-flex justify-between items-center">
+            <h4>How long does a typical repair take?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-3"></i>
+          </div>
+          <div class="faq-answer" id="answer-3">
+            <p>Most repairs are completed in 1-2 days. Full replacements typically take 2-4 days depending on roof size and weather. We provide exact timelines before work begins.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(4)">
+          <div class="d-flex justify-between items-center">
+            <h4>Are you licensed and insured in Illinois?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-4"></i>
+          </div>
+          <div class="faq-answer" id="answer-4">
+            <p>Yes. Ameribuild & Roofing Inc. is fully licensed (License #108.000965) and carries comprehensive liability and workers’ compensation insurance to protect you and your property.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(5)">
+          <div class="d-flex justify-between items-center">
+            <h4>What warranty do you offer?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-5"></i>
+          </div>
+          <div class="faq-answer" id="answer-5">
+            <p>We provide a 10-year workmanship warranty on all repairs and replacements, in addition to manufacturer warranties on materials (typically 25-50 years for shingles).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: FINAL CTA -->
+  <section class="section bg-white" id="cta">
+    <div class="container">
+      <div class="cols-50-50 mobile-stack">
+        <div>
+          <div class="stars mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h2 class="section-headline">Ready for an Honest Roof Assessment?</h2>
+          <p class="subheadline mb-6">Schedule your <strong>free, no-pressure inspection with drone imagery</strong> today. We’ll give you the truth—nothing more, nothing less.</p>
+          <div class="d-flex items-center gap-2 mb-4">
+            <i class="fas fa-phone icon-sm" style="color: var(--brand);"></i>
+            <span class="font-bold"><a href="tel:+13125550198">📞 Call Us Directly: (312) 555-0198</a></span>
+          </div>
+        </div>
+        <div class="card">
+          <form>
+            <div class="form-group">
+              <label for="name" class="small-text">Full Name</label>
+              <input type="text" id="name" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="phone" class="small-text">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="address" class="small-text">Property Address & Service Needed</label>
+              <textarea id="address" rows="3" class="form-control" placeholder="e.g., 123 Main St, Chicago, IL - Need roof inspection after storm"></textarea>
+            </div>
+            <button type="submit" class="btn btn-block">Schedule Free Estimate Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12: FOOTER -->
+  <footer class="bg-light">
+    <div class="container">
+      <div class="footer-row text-center">
+        <div class="d-flex justify-center items-center gap-2">
+          <i class="fas fa-home" style="color: var(--brand); font-size: 1.5rem;"></i>
+          <span class="font-bold text-lg">Ameribuild & Roofing Inc.</span>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-row">
+        <div class="d-flex justify-between mobile-stack">
+          <div class="small-text">© 2025. Ameribuild & Roofing Inc. All Rights Reserved.</div>
+          <div class="footer-links">
+            <a href="https://www.ameri-build.com/privacy-policy/">Privacy Policy</a> |
+            <a href="https://www.ameri-build.com/terms-of-service/">Terms of Service</a> |
+            <a href="#">Cookies Settings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(index) {
+      const answer = document.getElementById(`answer-${index}`);
+      const arrow = document.getElementById(`arrow-${index}`);
+      
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        arrow.classList.remove('open');
+      } else {
+        answer.classList.add('show');
+        arrow.classList.add('open');
+      }
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
