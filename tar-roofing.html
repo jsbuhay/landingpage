@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TAR Roofing | Stress-Free Roof Repairs & Replacements in Chicago</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --dark: #111827;
+      --darker: #1f2937;
+      --gray: #4b5563;
+      --light-gray: #6b7280;
+      --lighter-gray: #9ca3af;
+      --very-light-gray: #e5e7eb;
+      --off-white: #f9fafb;
+      --white: #ffffff;
+      --brand: #10b981;
+      --brand-dark: #059669;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--gray);
+      line-height: 1.6;
+      background-color: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--darker);
+      font-weight: 700;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--brand);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      font-size: 1.125rem;
+      text-align: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--brand-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-block {
+      width: 100%;
+      padding: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    .text-center { text-align: center; }
+    .text-left { text-align: left; }
+    .text-right { text-align: right; }
+
+    .d-flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .flex-row { flex-direction: row; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .items-center { align-items: center; }
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+
+    .mt-2 { margin-top: 0.5rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+
+    .bg-white { background-color: var(--white); }
+    .bg-light { background-color: var(--off-white); }
+    .border { border: 1px solid var(--very-light-gray); }
+    .rounded-xl { border-radius: 1rem; }
+
+    .stars { color: #fbbf24; font-size: 1.125rem; }
+
+    .hidden { display: none; }
+
+    /* Typography */
+    .hero-headline {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+
+    .hero-subhead {
+      font-size: 1.375rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .section-headline {
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .subheadline {
+      font-size: 1.25rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .small-text { font-size: 0.875rem; color: var(--lighter-gray); }
+    .micro-text { font-size: 0.75rem; color: var(--lighter-gray); }
+
+    /* Layout */
+    @media (min-width: 1024px) {
+      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      .cols-60-40 { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; }
+      .cols-40-60 { display: grid; grid-template-columns: 2fr 3fr; gap: 3rem; }
+      .cols-30-40-30 { display: grid; grid-template-columns: 0.75fr 1fr 0.75fr; gap: 2.5rem; }
+      .cols-50-50 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+
+    @media (max-width: 1023px) {
+      .mobile-stack { display: flex; flex-direction: column; gap: 2rem; }
+      .hero-headline { font-size: 2.25rem; }
+      .hero-subhead { font-size: 1.125rem; }
+      .section-headline { font-size: 1.875rem; }
+    }
+
+    /* Card */
+    .card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      padding: 1.75rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Icons */
+    .icon-lg { font-size: 1.5rem; margin-right: 0.5rem; }
+    .icon-sm { font-size: 1rem; margin-right: 0.375rem; }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.875rem;
+      border: 1px solid var(--very-light-gray);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brand);
+    }
+
+    /* Accordion */
+    .faq-item {
+      background: var(--white);
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      border: 1px solid var(--very-light-gray);
+    }
+
+    .faq-answer {
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .faq-answer.show {
+      display: block;
+    }
+
+    .arrow { transition: transform 0.2s; }
+    .arrow.open { transform: rotate(180deg); }
+
+    /* Footer */
+    .footer-divider {
+      height: 1px;
+      background-color: var(--very-light-gray);
+      margin: 0 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--light-gray);
+      font-size: 0.875rem;
+      margin: 0 0.75rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--darker);
+    }
+
+    .footer-row {
+      padding: 2.5rem 0;
+    }
+
+    /* Before/After */
+    .before-after-box {
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .before { background-color: #fef2f2; border: 1px solid #fecaca; }
+    .after { background-color: #f0fdf4; border: 1px solid #bbf7d0; }
+
+    /* Video section */
+    .video-thumb {
+      background: #f3f4f6;
+      height: 300px;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .play-btn {
+      width: 80px;
+      height: 80px;
+      background: rgba(16, 185, 129, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .play-btn:hover {
+      background: rgba(5, 150, 105, 0.9);
+    }
+
+    /* Feature logos */
+    .feature-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-logo {
+      height: 40px;
+      opacity: 0.7;
+      filter: grayscale(100%);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: TOP BAR -->
+  <header class="bg-white shadow-sm border-b border-gray-100">
+    <div class="container">
+      <div class="d-flex justify-between items-center py-4">
+        <div class="d-flex items-center gap-2">
+          <i class="fas fa-house" style="color: var(--brand); font-size: 1.5rem;"></i>
+          <span class="font-bold text-lg">TAR Roofing</span>
+        </div>
+        <a href="#cta" class="btn">Schedule Free Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO SECTION -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cols-60-40 mobile-stack">
+        <div>
+          <div class="stars mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            &nbsp; 4.9 Star Rating Based on 130+ Verified Reviews
+          </div>
+          <h1 class="hero-headline">Stress-Free Roof Repairs & Replacements</h1>
+          <p class="hero-subhead mt-4 mb-6">You can count on us for an honest evaluation, a timely solution, and solid craftsmanship. Just sit back and relax while we take care of your roof—with zero debris left behind and full cleanup guaranteed.</p>
+          <a href="#cta" class="btn">Get Your Free Quote →</a>
+        </div>
+        <div>
+          <img src="https://placehold.co/600x500/f3f4f6/6b7280?text=Chicago+Roofing+Replacement" alt="TAR Roofing team installing new roof in Chicago" style="width:100%; border-radius:1rem;"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CREDIBILITY BAR -->
+  <section class="section bg-white">
+    <div class="container text-center">
+      <h3 class="subheadline">As Featured In & Trusted By</h3>
+      <div class="feature-logos">
+        <div class="feature-logo">Angi</div>
+        <div class="feature-logo">BBB</div>
+        <div class="feature-logo">HomeAdvisor</div>
+        <div class="feature-logo">Yelp Elite</div>
+        <div class="feature-logo">Chicago Roofing Assoc.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: PRE-TESTIMONIALS -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="grid-3 mobile-stack" id="pre-testimonials">
+        <div class="card text-center">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“The whole experience was very positive. High level of customer service from every person. They were very efficient with removing existing decking and replacing the roof. They also didn’t leave a trace of leftover debris.”</p>
+          <p class="mt-3"><strong>— David H.</strong></p>
+        </div>
+        <div class="card text-center">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“There was a downspout mistake on the gutters, but they came back the next day to fix it, which was a Saturday. I felt they provided the superior service.”</p>
+          <p class="mt-3"><strong>— Peter A.</strong></p>
+        </div>
+        <div class="card text-center">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“They were incredibly efficient, finishing ahead of schedule in just two days. Their neatness was top-notch—no debris left behind, and my yard stayed spotless.”</p>
+          <p class="mt-3"><strong>— Rafal M.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: BUYER OBJECTION HANDLER -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="cols-40-60 mobile-stack">
+        <div>
+          <img src="https://placehold.co/500x500/f3f4f6/6b7280?text=TAR+Roofing+Team+in+Action" alt="TAR Roofing professional team" style="width:100%; border-radius:1rem;"/>
+        </div>
+        <div>
+          <h2 class="section-headline">Why Choose TAR Roofing? Eliminating Your Risk.</h2>
+          <p class="subheadline mb-6">With Chicago’s harsh weather—from summer storms to winter ice—you need a roofer who delivers on promises, cleans up thoroughly, and stands behind their work.</p>
+          <div class="mb-6">
+            <div class="d-flex gap-4 mb-4">
+              <i class="fas fa-clock icon-lg" style="color: var(--brand);"></i>
+              <div>
+                <h4><strong>Why Now?</strong></h4>
+                <p>Flat and low-slope roofs in Chicago are prone to ponding water and freeze-thaw damage. Small leaks today become major structural issues tomorrow—address them before winter hits.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-4 mb-4">
+              <i class="fas fa-check-circle icon-lg" style="color: var(--brand);"></i>
+              <div>
+                <h4><strong>Why TAR?</strong></h4>
+                <p>We specialize in flat roof systems, shingle replacements, and gutter installations—with a 5-year workmanship warranty, same-day fixes for errors, and 100% debris removal guaranteed.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-4">
+              <i class="fas fa-home icon-lg" style="color: var(--brand);"></i>
+              <div>
+                <h4><strong>Is This For You?</strong></h4>
+                <p>If you’re a Chicago homeowner who values efficiency, cleanliness, and reliability over flashy sales tactics—you’ve found your roofing partner.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#cta" class="btn">Get Peace of Mind Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: MORE TESTIMONIALS -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-headline text-center mb-8">Don't Just Take Our Word For It: Verified Reviews</h2>
+      <div class="grid-2 mobile-stack">
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“We had TAR Roofing recently replace the ~1,300 SF flat roof on our condo building. They came recommended and didn’t disappoint. <strong>The whole experience was very positive.</strong> High level of customer service from every person with whom we interacted. They were responsive with the quote and scheduling the work. They were very efficient with removing existing decking and replacing the roof. <strong>They also didn’t leave a trace of leftover debris.</strong>”</p>
+          <p class="mt-4"><strong>David Hoogmoed</strong> (Condo Board, Chicago)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“Small residential flat roof resurface and gutter install. There was a downspout mistake on the gutters, <strong>but they came back the next day to fix it, which was a Saturday.</strong> Their price competes with other quotes and I felt they provided the superior service. TAR did not recommend a roof regrade and there are 2-3 spots where water pools but they provided a five year warranty for the work in the contract.”</p>
+          <p class="mt-4"><strong>Peter Albright</strong> (Homeowner, Chicago)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“TAR Roofing did an amazing job replacing our roof! <strong>They were incredibly efficient, finishing ahead of schedule in just two days.</strong> Their neatness was top-notch—no debris left behind, and my yard stayed spotless. Highly recommend for quality and professionalism.”</p>
+          <p class="mt-4"><strong>Rafal Mosior</strong> (Homeowner, Chicago)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“After a hailstorm damaged our roof, TAR responded the same day. They walked us through insurance claim steps and completed the full replacement in three days. <strong>My yard looked cleaner after they left than before they arrived.</strong>”</p>
+          <p class="mt-4"><strong>Jennifer Liu</strong> (Homeowner, Evanston)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“We interviewed four roofers. TAR was the only one who showed up on time, answered every question clearly, and didn’t pressure us. <strong>Their crew worked quietly and respectfully—and they swept every shingle off our driveway.</strong>”</p>
+          <p class="mt-4"><strong>Mark and Susan Rivera</strong> (Homeowners, Oak Park)</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>“For our flat roof leak, TAR didn’t just patch it—they found the root cause and fixed it properly. <strong>They even sealed the flashings around vents as a preventative measure.</strong> Now we sleep soundly during storms.”</p>
+          <p class="mt-4"><strong>Thomas Greene</strong> (Homeowner, Skokie)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: VALUE STACK -->
+  <section class="section bg-white">
+    <div class="container">
+      <h2 class="section-headline text-center mb-8">The 4 Pillars of Stress-Free Roofing</h2>
+      <div class="cols-30-40-30 mobile-stack">
+        <div>
+          <div class="card mb-4">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-broom icon-lg" style="color: var(--brand);"></i>
+              <h4>Zero-Trace Cleanup</h4>
+            </div>
+            <p>We use magnetic sweepers, tarps, and daily site cleanups to ensure not a single nail or shingle fragment remains on your property after work is complete.</p>
+          </div>
+          <div class="card">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-bolt icon-lg" style="color: var(--brand);"></i>
+              <h4>Fast, Efficient Work</h4>
+            </div>
+            <p>Most full roof replacements are completed in 2–3 days. Our crews arrive early, work efficiently, and minimize disruption to your daily life.</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://placehold.co/400x600/f3f4f6/6b7280?text=TAR+Roofing+Process" alt="TAR Roofing service process" style="width:100%; border-radius:1rem;"/>
+        </div>
+        <div>
+          <div class="card mb-4">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-shield-alt icon-lg" style="color: var(--brand);"></i>
+              <h4>5-Year Warranty</h4>
+            </div>
+            <p>All work comes with a 5-year labor warranty—unusual in an industry where most offer 1–2 years. We stand by our craftsmanship without hesitation.</p>
+          </div>
+          <div class="card">
+            <div class="d-flex gap-3 mb-3">
+              <i class="fas fa-redo icon-lg" style="color: var(--brand);"></i>
+              <h4>Same-Day Corrections</h4>
+            </div>
+            <p>If anything isn’t right—even on a Saturday—we return immediately to fix it. Your satisfaction is non-negotiable.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="#cta" class="btn">Start Your Project with Confidence</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: BEFORE & AFTER -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-headline text-center mb-8">Quality You Can See: The TAR Transformation</h2>
+      <div class="cols-50-50 mobile-stack">
+        <div class="before-after-box before">
+          <div class="d-flex justify-center mb-3">
+            <i class="fas fa-water icon-lg" style="color: #ef4444;"></i>
+          </div>
+          <h3 class="mb-2">BEFORE: Ponding Water, Aging Membrane</h3>
+          <p class="subheadline mb-3">Worn, Leaking, and Unreliable</p>
+          <p>Flat roof with cracked EPDM membrane, standing water after rain, and failing flashings. Interior drywall already showing moisture stains.</p>
+        </div>
+        <div class="before-after-box after">
+          <div class="d-flex justify-center mb-3">
+            <i class="fas fa-sun icon-lg" style="color: #10b981;"></i>
+          </div>
+          <h3 class="mb-2">AFTER: New TPO Roof System with Proper Drainage</h3>
+          <p class="subheadline mb-3">Sealed, Durable, and Warrantied</p>
+          <p>Full tear-off and replacement with 60-mil TPO roofing, tapered insulation for drainage, and reinforced flashings. Now fully protected with 5-year labor warranty.</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="#cta" class="btn">Request Your Free Quote Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: VIDEO TESTIMONIAL -->
+  <section class="section bg-white">
+    <div class="container">
+      <h2 class="section-headline text-center mb-2">Client Video Reviews: Why “Stress-Free” Matters</h2>
+      <p class="subheadline text-center mb-8">Hear directly from Chicago homeowners about TAR Roofing’s efficiency, cleanliness, and reliability.</p>
+      <div class="cols-40-60 mobile-stack">
+        <div>
+          <div class="video-thumb">
+            <div class="play-btn">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <p class="text-center mt-3 small-text">Click to watch the full testimonial (3:12 min)</p>
+        </div>
+        <div>
+          <div class="stars mb-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="mb-4">They Finished in Two Days—And Left My Yard Spotless</h3>
+          <p>“I was dreading a week-long roofing nightmare. TAR showed up at 7 AM, worked quietly and efficiently, and had the whole job done by day two. <strong>Not one nail in my grass—my landscaper couldn’t believe it.</strong> That’s professionalism you don’t see anymore.”</p>
+          <p class="mt-4"><strong>— Michelle and Paul K.</strong>, Verified Customer</p>
+          <p class="mt-4 small-text">Video Testimonial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: FAQ -->
+  <section class="section bg-light">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-headline text-center mb-2">Common Questions & Warranty Clarity.</h2>
+      <p class="subheadline text-center mb-8">Addressing the important details on estimates, warranties, and process.</p>
+
+      <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(0)">
+          <div class="d-flex justify-between items-center">
+            <h4>How long does a typical roof replacement take?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-0"></i>
+          </div>
+          <div class="faq-answer" id="answer-0">
+            <p>Most residential roof replacements in Chicago are completed in 2–3 days. Flat roofs may take 1–2 days. We provide exact timelines after inspection and never leave your home exposed overnight.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(1)">
+          <div class="d-flex justify-between items-center">
+            <h4>Do you really clean up every piece of debris?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-1"></i>
+          </div>
+          <div class="faq-answer" id="answer-1">
+            <p>Yes. We use magnetic nail sweepers, tarps under work areas, and perform a final walk-through with the homeowner. If you find a single nail after we leave, call us—we’ll come back immediately.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(2)">
+          <div class="d-flex justify-between items-center">
+            <h4>What warranty do you provide?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-2"></i>
+          </div>
+          <div class="faq-answer" id="answer-2">
+            <p>We offer a 5-year labor warranty on all roofing work—far beyond the industry standard. Manufacturer material warranties (typically 20–50 years) are also included.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(3)">
+          <div class="d-flex justify-between items-center">
+            <h4>Do you handle flat roof repairs?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-3"></i>
+          </div>
+          <div class="faq-answer" id="answer-3">
+            <p>Yes. We specialize in flat and low-slope roofing systems including TPO, EPDM, and modified bitumen. We can repair or fully replace your flat roof with proper drainage solutions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(4)">
+          <div class="d-flex justify-between items-center">
+            <h4>Are you licensed and insured in Illinois?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-4"></i>
+          </div>
+          <div class="faq-answer" id="answer-4">
+            <p>Yes. TAR Roofing is fully licensed and insured in Illinois, with comprehensive liability and workers’ compensation coverage to protect you and your property.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(5)">
+          <div class="d-flex justify-between items-center">
+            <h4>What if something goes wrong after the job?</h4>
+            <i class="fas fa-chevron-down arrow" id="arrow-5"></i>
+          </div>
+          <div class="faq-answer" id="answer-5">
+            <p>We guarantee corrections—even on weekends. If you’re not 100% satisfied or notice any issue, we return within 24–48 hours to fix it at no cost. Your peace of mind is our promise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: FINAL CTA -->
+  <section class="section bg-white" id="cta">
+    <div class="container">
+      <div class="cols-50-50 mobile-stack">
+        <div>
+          <div class="stars mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h2 class="section-headline">Ready for Stress-Free Roofing?</h2>
+          <p class="subheadline mb-6">Schedule your <strong>free, no-obligation estimate</strong> today. We guarantee honest pricing, full cleanup, and quality work—every time.</p>
+          <div class="d-flex items-center gap-2 mb-4">
+            <i class="fas fa-phone icon-sm" style="color: var(--brand);"></i>
+            <span class="font-bold"><a href="tel:+17735550187">📞 Call Us Directly: (773) 555-0187</a></span>
+          </div>
+        </div>
+        <div class="card">
+          <form>
+            <div class="form-group">
+              <label for="name" class="small-text">Full Name</label>
+              <input type="text" id="name" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="phone" class="small-text">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="address" class="small-text">Property Address & Service Needed</label>
+              <textarea id="address" rows="3" class="form-control" placeholder="e.g., 123 Main St, Chicago, IL - Need flat roof replacement"></textarea>
+            </div>
+            <button type="submit" class="btn btn-block">Schedule Free Estimate Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12: FOOTER -->
+  <footer class="bg-light">
+    <div class="container">
+      <div class="footer-row text-center">
+        <div class="d-flex justify-center items-center gap-2">
+          <i class="fas fa-house" style="color: var(--brand); font-size: 1.5rem;"></i>
+          <span class="font-bold text-lg">TAR Roofing</span>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-row">
+        <div class="d-flex justify-between mobile-stack">
+          <div class="small-text">© 2025. TAR Roofing. All Rights Reserved.</div>
+          <div class="footer-links">
+            <a href="https://tarroofing.com/privacy-policy/">Privacy Policy</a> |
+            <a href="https://tarroofing.com/terms-of-service/">Terms of Service</a> |
+            <a href="#">Cookies Settings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(index) {
+      const answer = document.getElementById(`answer-${index}`);
+      const arrow = document.getElementById(`arrow-${index}`);
+      
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        arrow.classList.remove('open');
+      } else {
+        answer.classList.add('show');
+        arrow.classList.add('open');
+      }
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
